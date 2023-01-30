@@ -17,34 +17,75 @@ class VisitRequestLong(models.Model):
                 raise ValidationError(_('You cannot confirm a visit request without lines.'))
             record.state = 'under_review'
             record.visit_request_long_line_ids.write({'state': 'under_review'})
-        return res
+        return {
+            'type': 'ir.actions.act_window',
+            'name': _('New Long Visit Requests'),
+            'res_model': 'visit.request.long',
+            'view_mode': 'tree',
+            'view_id': self.env.ref('itq_visit_request_concrete.visit_request_long_tree_view').id,
+            'target': 'main',
+            'domain': [('state', '=', 'draft')],
+        }
 
     def action_cancel(self):
         res = super(VisitRequestLong, self).action_cancel()
         for record in self:
             record.state = 'cancel'
             record.visit_request_long_line_ids.write({'state': 'cancel'})
-        return res
+        return {
+            'type': 'ir.actions.act_window',
+            'name': _('Canceled Long Visit Requests'),
+            'res_model': 'visit.request.long',
+            'view_mode': 'tree',
+            'view_id': self.env.ref('itq_visit_request_concrete.visit_request_long_tree_view').id,
+            'target': 'main',
+            'domain': [('state', '=', 'cancel')],
+        }
 
     def action_send_request(self):
-        res = super(VisitRequestLong, self).action_send_request()
+        super(VisitRequestLong, self).action_send_request()
         for record in self:
             record.state = 'under_approve'
             for line in record.visit_request_long_line_ids:
                 if line.state != 'approved':
                     line.write({'state': 'under_review'})
-        return res
+        return {
+            'type': 'ir.actions.act_window',
+            'name': _('Under Review Long Visit Requests'),
+            'res_model': 'visit.request.long',
+            'view_mode': 'tree',
+            'view_id': self.env.ref('itq_visit_request_concrete.visit_request_long_tree_view').id,
+            'target': 'main',
+            'domain': [('state', '=', 'under_review')],
+        }
 
     def action_return_request(self):
-        res = super(VisitRequestLong, self).action_return_request()
+        super(VisitRequestLong, self).action_return_request()
         for record in self:
             if record.state == 'under_review':
                 record.state = 'draft'
                 record.visit_request_long_line_ids.write({'state': 'draft'})
+                return {
+                    'type': 'ir.actions.act_window',
+                    'name': _('Canceled Long Visit Requests'),
+                    'res_model': 'visit.request.long',
+                    'view_mode': 'tree',
+                    'view_id': self.env.ref('itq_visit_request_concrete.visit_request_long_tree_view').id,
+                    'target': 'main',
+                    'domain': [('state', '=', 'under_review')],
+                }
             if record.state == 'under_approve':
                 record.state = 'under_review'
                 record.visit_request_long_line_ids.write({'state': 'under_review'})
-        return res
+                return {
+                    'type': 'ir.actions.act_window',
+                    'name': _('Canceled Long Visit Requests'),
+                    'res_model': 'visit.request.long',
+                    'view_mode': 'tree',
+                    'view_id': self.env.ref('itq_visit_request_concrete.visit_request_long_tree_view').id,
+                    'target': 'main',
+                    'domain': [('state', '=', 'under_approve')],
+                }
 
     def set_draft(self):
         res = super(VisitRequestLong, self).set_draft()
@@ -52,7 +93,15 @@ class VisitRequestLong(models.Model):
             record.state = 'draft'
             record.visibility_flag = False
             record.visit_request_long_line_ids.write({'state': 'draft'})
-        return res
+        return {
+            'type': 'ir.actions.act_window',
+            'name': _('New Long Visit Requests'),
+            'res_model': 'visit.request.long',
+            'view_mode': 'tree',
+            'view_id': self.env.ref('itq_visit_request_concrete.visit_request_long_tree_view').id,
+            'target': 'main',
+            'domain': [('state', '=', 'draft')],
+        }
 
     def action_approve(self):
         res = super(VisitRequestLong, self).action_approve()
@@ -83,7 +132,15 @@ class VisitRequestLong(models.Model):
                     continue
             record.state = 'approved'
             record.visit_request_long_line_ids.filtered(lambda rec: rec.state == 'under_review').write({'state': 'approved'})
-        return res
+        return {
+            'type': 'ir.actions.act_window',
+            'name': _('Approved Long Visit Requests'),
+            'res_model': 'visit.request.long',
+            'view_mode': 'tree',
+            'view_id': self.env.ref('itq_visit_request_concrete.visit_request_long_tree_view').id,
+            'target': 'main',
+            'domain': [('state', '=', 'approved')],
+        }
 
     def action_review_reject(self):
         res = super(VisitRequestLong, self).action_review_reject()
@@ -94,14 +151,30 @@ class VisitRequestLong(models.Model):
                     record.visit_request_long_line_ids.filtered(lambda rec: rec.state == 'under_review').write({'state': 'rejected'})
                 else:
                     continue
-        return res
+        return {
+            'type': 'ir.actions.act_window',
+            'name': _('Reviewer Long Visit Requests'),
+            'res_model': 'visit.request.long',
+            'view_mode': 'tree',
+            'view_id': self.env.ref('itq_visit_request_concrete.visit_request_long_tree_view').id,
+            'target': 'main',
+            'domain': [('state', '=', 'review_rejected')],
+        }
 
     def action_approve_reject(self):
         res = super(VisitRequestLong, self).action_approve_reject()
         for record in self:
             record.state = 'approver_rejected'
             record.visit_request_long_line_ids.write({'state': 'rejected'})
-        return res
+        return {
+            'type': 'ir.actions.act_window',
+            'name': _('Approver Rejected Long Visit Requests'),
+            'res_model': 'visit.request.long',
+            'view_mode': 'tree',
+            'view_id': self.env.ref('itq_visit_request_concrete.visit_request_long_tree_view').id,
+            'target': 'main',
+            'domain': [('state', '=', 'approver_rejected')],
+        }
 
     @api.model
     def create(self, vals):
@@ -111,10 +184,6 @@ class VisitRequestLong(models.Model):
             raise ValidationError(_('You cannot create a visit request without lines.'))
         result = super(VisitRequestLong, self).create(vals)
         return result
-
-    def print_invoice_report(self):
-        return self.env.ref('itq_visit_request_concrete.long_visit_request_report').report_action(self)
-
 
     def _compute_permission_count(self):
         for record in self:
