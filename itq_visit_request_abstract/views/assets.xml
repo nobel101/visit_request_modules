@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<odoo>
+    <template id="assets_backend" name="visit_request_visit assets" inherit_id="web.assets_backend">
+        <xpath expr="." position="inside">
+            <script type="text/javascript" src="/itq_visit_request_abstract/static/src/js/rejection_reason.js"></script>
+        </xpath>
+    </template>
+</odoo>

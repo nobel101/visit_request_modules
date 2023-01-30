@@ -1,0 +1,159 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<odoo>
+    <report
+            id="long_visit_request_pdf_report"
+            string="Long Visit Request"
+            model="visit.request.long"
+            report_type="qweb-pdf"
+            name="itq_visit_request_concrete.long_visit_request_report"
+            file="itq_visit_request_concrete.long_visit_request_report"
+            print_report_name="'Long Visit Request - %s' % (object.request_number)"
+    />
+    <template id="long_visit_request_report">
+        <t t-call="web.html_container">
+            <t t-foreach="docs" t-as="o">
+                <t t-call="web.external_layout">
+                    <div class="page">
+                        <t t-if="o and 'company_id' in o">
+                            <t t-set="company" t-value="o.company_id"/>
+                        </t>
+                        <t t-if="not o or not 'company_id' in o">
+                            <t t-set="company" t-value="res_company"/>
+                        </t>
+                        <h2>Long Visit Request</h2>
+                        <h3><span t-field="o.request_number"/></h3>
+                        <div class="header">
+                            <table style="width: 100%; direction : rtl; padding-bottom : 3px">
+                                <tbody>
+                                    <tr>
+                                        <td style="width: 20%; text-align:right;font-size:12px;White-space: nowrap;">
+                                            <strong>
+                                                <span>المملكة العربية السعودية</span>
+                                            </strong>
+                                            <div>الإدارة العامة للموارد البشرية</div>
+                                            <div>النظام التكميلي</div>
+                                        </td>
+                                        <br/>
+                                        <br/>
+
+                                        <td style="width: 58%; text-align : center">
+                                            <img
+                                                    t-if="company.logo"
+                                                    style="max-height:75px;max-width:75px;border-radius : 50px; padding-top : 15px"
+                                                    t-att-src="'data:image/png;base64,%s' % to_text(company.logo)"
+                                                    class="pull-center"/>
+
+                                            <div style="font-size : 18px">
+                                                <span>تقرير التكميلي اليومي</span>
+                                            </div>
+                                        </td>
+
+                                        <td style="width: 22%; text-align : left">
+                                            <div class="text-right" style="margin-right:20%">
+                                                <div style="font-size:12px">
+                                                    <span style="White-space: nowrap;">المستخدم :</span>
+                                                    <span t-esc="user.login"/>
+                                                </div>
+                                                <div style="font-size:12px">
+                                                    <span style="White-space: nowrap;">الصفحة:</span>
+                                                    <span class="page"/>/
+                                                    <span class="topage"/>
+                                                </div>
+                                                <div style="font-size:12px">
+                                                    <span style="White-space: nowrap;">التاريخ:</span>
+                                                    <span t-esc="docs._get_hijri_date(datetime.datetime.today().strftime('%Y-%m-%d'))"/>
+                                                </div>
+                                            </div>
+                                        </td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+
+                        <br/>
+                        <br/>
+                        <table class="table table-bordered">
+                            <thead class="thead-dark">
+                                <tr>
+                                    <th scope="col">
+                                        الزائر
+                                    </th>
+                                    <th scope="col">
+                                        رقم الهوية
+                                    </th>
+                                    <th scope="col">
+                                        جنسية الزائر
+                                    </th>
+                                    <th>
+                                        <span>رقم الجوال</span>
+                                    </th>
+                                </tr>
+                            </thead>
+
+                            <tbody>
+                                <t t-foreach="o.visit_request_long_line_ids" t-as="line">
+                                    <tr>
+                                        <td>
+                                            <span t-field="line.visitor_name"/>
+                                        </td>
+                                        <td>
+                                            <span t-field="line.visitor_id_number"/>
+                                        </td>
+                                        <td>
+                                            <span t-field="line.country_id"/>
+                                        </td>
+                                        <td>
+                                            <span t-field="line.visitor_phone"/>
+                                        </td>
+                                    </tr>
+                                </t>
+                            </tbody>
+                        </table>
+                        <br/>
+                        <br/>
+                        <table t-if="o.visit_request_long_line_ids.filtered(lambda line: line.need_car_authorization)"
+                               class="table table-bordered">
+                            <thead class="thead-dark">
+                                <tr>
+                                    <th scope="col">
+                                        نوع السيارة
+                                    </th>
+                                    <th scope="col">
+                                        الموديل
+                                    </th>
+                                    <th scope="col">
+                                        اللون
+                                    </th>
+                                    <th>
+                                        رقم اللوحة
+                                    </th>
+                                </tr>
+                            </thead>
+
+                            <tbody>
+                                <t t-foreach="o.visit_request_long_line_ids" t-as="line">
+                                    <tr t-if="line.need_car_authorization">
+                                        <td>
+                                            <span t-field="line.car_type"/>
+                                        </td>
+                                        <td>
+                                            <span t-field="line.car_model"/>
+                                        </td>
+                                        <td>
+                                            <span t-field="line.car_color"/>
+                                        </td>
+                                        <td>
+                                            <span t-field="line.car_sign"/>
+                                        </td>
+                                    </tr>
+                                </t>
+                            </tbody>
+                        </table>
+                        <br/>
+                        </div>
+                </t>
+            </t>
+        </t>
+
+    </template>
+</odoo>

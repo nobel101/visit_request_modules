@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<odoo>
+    <record id="visit_request_abstract_form_view" model="ir.ui.view">
+        <field name="name">visit.request.abstract.form.view</field>
+        <field name="model">visit.request.abstract</field>
+        <field name="mode">primary</field>
+        <field name="arch" type="xml">
+            <form>
+                <header>
+                    <field name="state"
+                           widget="statusbar"
+                           statusbar_visible="draft,under_review,approved,cancel"/>
+                    <button class="btn btn-primary" name="action_confirm" type="object" states="draft"
+                            string="Send to Review"/>
+                    <button class="btn btn-primary" name="action_cancel" type="object"
+                            states="under_review,under_approve,returned" string="Cancel" special="cancel"/>
+                    <button class="btn btn-primary" name="action_send_request" type="object" states="under_review"
+                            string="Send To Approve"/>
+                    <button class="btn btn-primary" name="action_return_request" type="object"
+                            states="under_review,under_approve" string="Return"/>
+                    <button class="btn btn-primary" name="set_draft" type="object" states="review_rejected"
+                            string="Set To Draft"/>
+                    <button class="btn btn-primary" name="%(itq_visit_request_abstract.action_view_reviewer_rejection_reason_wizard)d"
+                            type="action" states="under_review"
+                            string="Reviewer Reject"/>
+                    <button class="btn btn-primary" name="%(itq_visit_request_abstract.action_view_approver_rejection_reason_wizard)d" type="action" states="under_approve"
+                            string="Approver Reject"/>
+                    <button class="btn btn-primary" name="action_approve" type="object" states="under_approve"
+                            string="Approve"/>
+                </header>
+                <sheet>
+                     <div class="oe_button_box" name="button_box">
+                     </div>
+                    <field name="visibility_flag" invisible="1"/>
+                    <div class="oe_title">
+                        <h1>
+                            <field name="request_number"/>
+                        </h1>
+                    </div>
+                    <group>
+                        <group name="req_info" string="Request Information">
+                            <field name="user_id"
+                                   attrs="{'invisible':[('visibility_flag','=',False)],'required':[('visibility_flag','=',True)],'readonly':[('state', 'not in', ['draft','returned'])]}"/>
+                            <field name="date_request"
+                                   attrs="{'invisible':[('visibility_flag','=',False)],'required':[('visibility_flag','=',True)],'readonly':[('state', 'not in', ['draft','returned'])]}"/>
+                            <field name="date_start" string="Request Start Date"
+                                   attrs="{'readonly': [('state', 'not in', ['draft','returned'],[('state', 'not in', ['draft','returned'])])]}"/>
+                            <field name="date_end" string="Request End Date"
+                                   attrs="{'readonly': [('state', 'not in', ['draft','returned'])]}"/>
+                            <field name="visit_duration"
+                                   attrs="{'readonly': [('state', 'not in', ['draft','returned'])]}"/>
+                        </group>
+                        <group name="approval_information">
+                            <field name="hr_department_id"
+                                   attrs="{'readonly': [('state', 'not in', ['draft','returned'])]}"/>
+                            <field name="approver_rejection_reason"
+                                   attrs="{'invisible':['|',('state','in',['approved','draft','cancel','returned']),('approver_rejection_reason','=',False)]}"/>
+                            <field name="reviewer_rejection_reason"
+                                   attrs="{'invisible':['|',('state','in',['approved','draft','cancel','returned']),('reviewer_rejection_reason','=',False)]}"/>
+                        </group>
+                    </group>
+                    <notebook>
+                        <page name="request_reason_page" string="Request Reason">
+                            <label for="request_reason"/>
+                            <field name="request_reason"
+                                   attrs="{'readonly': [('state', 'not in', ['draft','returned'])]}"/>
+                        </page>
+                        <page name="request_attachments" string="Attachments">
+                            <field name="attachment_ids" widget="many2many_binary"
+                                   attrs="{'readonly': [('state', 'not in', ['draft','returned'])]}"/>
+                        </page>
+                    </notebook>
+                </sheet>
+                <div class="oe_chatter">
+                    <field name="message_follower_ids" widget="mail_followers"/>
+                    <field name="message_ids" widget="mail_thread"/>
+                </div>
+            </form>
+        </field>
+    </record>
+    <record id="visit_request_abstract_tree_view" model="ir.ui.view">
+        <field name="name">visit.request.abstract.tree.view</field>
+        <field name="model">visit.request.abstract</field>
+        <field name="mode">primary</field>
+        <field name="arch" type="xml">
+            <tree>
+                <field name="request_number"/>
+                <field name="hr_department_id"/>
+                <field name="date_request"/>
+                <field name="state"/>
+            </tree>
+        </field>
+    </record>
+</odoo>
+
+
+

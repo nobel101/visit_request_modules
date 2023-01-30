@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<odoo>
+    <record id="visit_request_trainee_form_view" model="ir.ui.view">
+        <field name="name">visit.request.trainee.form.view</field>
+        <field name="model">visit.request.trainee</field>
+        <field name="mode">primary</field>
+        <field name="inherit_id" ref="itq_visit_request_abstract.visit_request_abstract_form_view"/>
+        <field name="arch" type="xml">
+            <form>
+            </form>
+        </field>
+    </record>
+</odoo>
