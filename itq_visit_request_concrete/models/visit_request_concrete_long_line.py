@@ -31,13 +31,17 @@ class VisitRequestLongLineConcrete(models.Model):
                     and any(line.state in ['under_review', 'draft'] for line in
                             record.long_visit_request_id.visit_request_long_line_ids):
                 record.state = 'rejected'
+                record.long_visit_request_id.action_approve()
                 if record.long_visit_request_id.state in ['under_approve','under_review']:
                     record.state = 'rejected'
                 else:
-                    raise ValidationError(_('You cannot reject a visit request in this state.'))
+                    if any(line.state == 'approved' for line in record.long_visit_request_id.visit_request_long_line_ids):
+                        record.long_visit_request_id.action_approve()
+                    record.state = 'rejected'
             else:
                 if record.state == 'under_review':
                     record.state = 'rejected'
+
         return super(VisitRequestLongLineConcrete, self).action_line_reject()
 
     @api.model

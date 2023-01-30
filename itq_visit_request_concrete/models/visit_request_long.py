@@ -58,7 +58,7 @@ class VisitRequestLong(models.Model):
         res = super(VisitRequestLong, self).action_approve()
         for record in self:
             for line in record.visit_request_long_line_ids:
-                if line.state == 'under_review' and record.state == 'under_approve':
+                if (line.state in ['approved','under_review']) and record.state == 'under_approve':
                     self.env['visit.permission'].sudo().create({
                         'name': 'Permission Number ' + record.request_number or ''+ ' For ' + line.visitor_name or '',
                         'visit_request_id': record.id,
