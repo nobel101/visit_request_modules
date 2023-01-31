@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<odoo>
+    <record id="visit_permission_tree_view" model="ir.ui.view">
+        <field name="name">visit.permission.tree.view</field>
+        <field name="model">visit.permission.login</field>
+        <field name="arch" type="xml">
+            <tree>
+                <field name="name"/>
+                <field name="type"/>
+                <field name="enter_time" attrs="{'invisible':[('type','=','out')]}"/>
+                <field name="exit_time" attrs="{'invisible':[('type','=','in')]}"/>
+            </tree>
+        </field>
+    </record>
+    <record id="visit_login_form_view" model="ir.ui.view">
+        <field name="name">visit.login.form.view</field>
+        <field name="model">visit.permission.login</field>
+        <field name="arch" type="xml">
+            <form>
+                <sheet>
+                    <div class="o_title" attrs="{'invisible':[('visit_permission_id','=',False)]}">
+                        <h1>
+                            <field name="name"/>
+                        </h1>
+                    </div>
+                    <group>
+                        <group string="Login" name="login_basic">
+                            <field name="visit_permission_id"/>
+                            <field name="type"/>
+                        </group>
+                        <group string="Time" attrs="{'invisible':[('type','=',False)]}">
+                            <field name="enter_time" attrs="{'invisible':[('type','=','out')]}"/>
+                            <field name="exit_time" attrs="{'invisible':[('type','=','in')]}"/>
+                        </group>
+                    </group>
+                </sheet>
+                <div class="oe_chatter">
+                    <field name="message_follower_ids" widget="mail_followers"/>
+                    <field name="activity_ids" widget="mail_activity"/>
+                    <field name="message_ids" widget="mail_thread"/>
+                </div>
+            </form>
+        </field>
+    </record>
+    <record id="window_action_visit_login" model="ir.actions.act_window">
+        <field name="name">Visits Time Logging</field>
+        <field name="res_model">visit.permission.login</field>
+        <field name="view_mode">tree,form</field>
+        <field name="view_type">form</field>
+        <field name="context">{'create':False,'edit':False}</field>
+    </record>
+    <menuitem id="main_menu_visit_login" name="Visit Login"
+              parent="itq_visit_request_concrete.main_visit_request_long"/>
+    <menuitem id="sub_menu_visit_login" name="Login" parent="main_menu_visit_login" action="window_action_visit_login"/>
+</odoo>

@@ -6,6 +6,9 @@
         <field name="arch" type="xml">
             <form edit="0" create="0">
                 <sheet>
+                    <div class="oe_button_box">
+
+                    </div>
                     <group>
                         <group string="Permission Info" name="info">
                             <field name="visit_request_id" string="Source"/>

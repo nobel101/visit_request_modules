@@ -1,0 +1,155 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+#	* itq_visit_login_screen
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 11.0\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2023-01-31 14:00+0000\n"
+"PO-Revision-Date: 2023-01-31 14:00+0000\n"
+"Last-Translator: <>\n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: \n"
+"Plural-Forms: \n"
+
+#. module: itq_visit_login_screen
+#: model:ir.model.fields,field_description:itq_visit_login_screen.field_visit_permission_login_create_uid
+msgid "Created by"
+msgstr "المُنْشئ"
+
+#. module: itq_visit_login_screen
+#: model:ir.model.fields,field_description:itq_visit_login_screen.field_visit_permission_login_create_date
+msgid "Created on"
+msgstr "أنشئ في"
+
+#. module: itq_visit_login_screen
+#: model:ir.model.fields,field_description:itq_visit_login_screen.field_visit_permission_login_display_name
+msgid "Display Name"
+msgstr "الاسم الظاهر"
+
+#. module: itq_visit_login_screen
+#: model:ir.ui.view,arch_db:itq_visit_login_screen.visit_permission_form_view_inherit
+msgid "Enter"
+msgstr "دُخُولْ"
+
+#. module: itq_visit_login_screen
+#: model:ir.model.fields,field_description:itq_visit_login_screen.field_visit_permission_login_enter_time
+msgid "Entering Time"
+msgstr "وقت الدُخُولْ"
+
+#. module: itq_visit_login_screen
+#: model:ir.ui.view,arch_db:itq_visit_login_screen.visit_permission_form_view_inherit
+msgid "Exit"
+msgstr "خُرُوجْ"
+
+#. module: itq_visit_login_screen
+#: model:ir.model.fields,field_description:itq_visit_login_screen.field_visit_permission_login_exit_time
+msgid "Exit Time"
+msgstr "وقت الخُرُوجْ"
+
+#. module: itq_visit_login_screen
+#: model:ir.model.fields,field_description:itq_visit_login_screen.field_visit_permission_login_id
+msgid "ID"
+msgstr "المعرف"
+
+#. module: itq_visit_login_screen
+#: selection:visit.permission,login_state:0
+#: selection:visit.permission.login,type:0
+msgid "In"
+msgstr "دَاخِل"
+
+#. module: itq_visit_login_screen
+#: model:ir.model.fields,field_description:itq_visit_login_screen.field_visit_permission_login___last_update
+msgid "Last Modified on"
+msgstr "آخر تعديل في"
+
+#. module: itq_visit_login_screen
+#: model:ir.model.fields,field_description:itq_visit_login_screen.field_visit_permission_login_write_uid
+msgid "Last Updated by"
+msgstr "آخر تحديث بواسطة"
+
+#. module: itq_visit_login_screen
+#: model:ir.model.fields,field_description:itq_visit_login_screen.field_visit_permission_login_write_date
+msgid "Last Updated on"
+msgstr "آخر تحديث في"
+
+#. module: itq_visit_login_screen
+#: model:ir.ui.menu,name:itq_visit_login_screen.sub_menu_visit_login
+#: model:ir.ui.view,arch_db:itq_visit_login_screen.visit_login_form_view
+msgid "Login"
+msgstr "البَوابَة"
+
+#. module: itq_visit_login_screen
+#: model:ir.model.fields,field_description:itq_visit_login_screen.field_visit_permission_login_count
+msgid "Login Count"
+msgstr "مَرْاتٍ المُرور"
+
+#. module: itq_visit_login_screen
+#: model:ir.model.fields,field_description:itq_visit_login_screen.field_visit_permission_login_state
+msgid "Login State"
+msgstr "حالة المٌرور"
+
+#. module: itq_visit_login_screen
+#: model:ir.ui.view,arch_db:itq_visit_login_screen.visit_permission_form_view_inherit
+msgid "Logins"
+msgstr "المسار"
+
+#. module: itq_visit_login_screen
+#: model:ir.model.fields,field_description:itq_visit_login_screen.field_visit_permission_login_name
+msgid "Name"
+msgstr "الاسم"
+
+#. module: itq_visit_login_screen
+#: selection:visit.permission,login_state:0
+#: selection:visit.permission.login,type:0
+msgid "Out"
+msgstr "خارج"
+
+#. module: itq_visit_login_screen
+#: code:addons/itq_visit_login_screen/models/visit_permission.py:35
+#, python-format
+msgid "The visitor already with Inside"
+msgstr "الزائر موجود بالفعل في الداخل."
+
+#. module: itq_visit_login_screen
+#: code:addons/itq_visit_login_screen/models/visit_permission.py:48
+#, python-format
+msgid "The visitor already with Outside"
+msgstr "الزائر موجود بالفعل في الخارج."
+
+#. module: itq_visit_login_screen
+#: model:ir.ui.view,arch_db:itq_visit_login_screen.visit_login_form_view
+msgid "Time"
+msgstr "الوقت"
+
+#. module: itq_visit_login_screen
+#: model:ir.model.fields,field_description:itq_visit_login_screen.field_visit_permission_login_type
+msgid "Type"
+msgstr "النوع"
+
+#. module: itq_visit_login_screen
+#: model:ir.model.fields,field_description:itq_visit_login_screen.field_visit_permission_visit_login_ids
+#: model:ir.ui.menu,name:itq_visit_login_screen.main_menu_visit_login
+msgid "Visit Login"
+msgstr "مسار المرور"
+
+#. module: itq_visit_login_screen
+#: model:ir.model,name:itq_visit_login_screen.model_visit_login
+#: model:ir.model,name:itq_visit_login_screen.model_visit_permission_login
+msgid "Visit Login Screen"
+msgstr "شاشة متابعة مرور الزوار"
+
+#. module: itq_visit_login_screen
+#: model:ir.model,name:itq_visit_login_screen.model_visit_permission
+#: model:ir.model.fields,field_description:itq_visit_login_screen.field_visit_permission_login_visit_permission_id
+msgid "Visit Permission"
+msgstr "تصريح الزيارة"
+
+#. module: itq_visit_login_screen
+#: model:ir.actions.act_window,name:itq_visit_login_screen.window_action_visit_login
+msgid "Visits Time Logging"
+msgstr "شاشة متابعة أوقات مرور الزوار"
+
