@@ -1,0 +1,473 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+#	* itq_visit_request_abstract
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 11.0\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2023-01-31 09:25+0000\n"
+"PO-Revision-Date: 2023-01-31 09:25+0000\n"
+"Last-Translator: <>\n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: \n"
+"Plural-Forms: \n"
+
+#. module: itq_visit_request_abstract
+#: model:ir.ui.view,arch_db:itq_visit_request_abstract.res_config_setting_visit_request_long_form_view
+msgid "<span class=\"fa fa-lg fa-building-o\" title=\"Values set here are company-specific.\" groups=\"base.group_multi_company\"/>"
+msgstr "<span class=\"fa fa-lg fa-building-o\" title=\"Values set here are company-specific.\" groups=\"base.group_multi_company\"/>"
+
+#. module: itq_visit_request_abstract
+#: model:ir.ui.view,arch_db:itq_visit_request_abstract.visit_request_abstract_form_view
+msgid "Approve"
+msgstr "موافقة"
+
+#. module: itq_visit_request_abstract
+#: selection:visit.request.abstract,state:0
+#: selection:visit.request.abstract.line,state:0
+#: selection:visit.request.concrete.long.line,state:0
+#: selection:visit.request.long,state:0
+#: selection:visit.request.trainee,state:0
+msgid "Approved"
+msgstr "موافقة"
+
+#. module: itq_visit_request_abstract
+#: model:ir.ui.view,arch_db:itq_visit_request_abstract.visit_request_abstract_form_view
+msgid "Approver Reject"
+msgstr "رفض المُعْتمد"
+
+#. module: itq_visit_request_abstract
+#: selection:visit.request.abstract,state:0
+#: selection:visit.request.long,state:0
+#: selection:visit.request.trainee,state:0
+msgid "Approver Rejected"
+msgstr "رفض المُعْتمد"
+
+#. module: itq_visit_request_abstract
+#: model:ir.actions.act_window,name:itq_visit_request_abstract.action_view_approver_rejection_reason_wizard
+#: model:ir.model.fields,field_description:itq_visit_request_abstract.field_rejection_reason_wizard_approver_rejection_reason
+#: model:ir.model.fields,field_description:itq_visit_request_abstract.field_visit_request_abstract_approver_rejection_reason
+#: model:ir.model.fields,field_description:itq_visit_request_abstract.field_visit_request_long_approver_rejection_reason
+#: model:ir.model.fields,field_description:itq_visit_request_abstract.field_visit_request_trainee_approver_rejection_reason
+msgid "Approver Rejection Reason"
+msgstr "تعليل رفض الموافق"
+
+#. module: itq_visit_request_abstract
+#: model:ir.model.fields,field_description:itq_visit_request_abstract.field_visit_request_abstract_attachment_ids
+#: model:ir.model.fields,field_description:itq_visit_request_abstract.field_visit_request_long_attachment_ids
+#: model:ir.model.fields,field_description:itq_visit_request_abstract.field_visit_request_trainee_attachment_ids
+#: model:ir.ui.view,arch_db:itq_visit_request_abstract.visit_request_abstract_form_view
+msgid "Attachments"
+msgstr "المُرفقات"
+
+#. module: itq_visit_request_abstract
+#: model:ir.model.fields,field_description:itq_visit_request_abstract.field_visit_request_abstract_user_id
+#: model:ir.model.fields,field_description:itq_visit_request_abstract.field_visit_request_long_user_id
+#: model:ir.model.fields,field_description:itq_visit_request_abstract.field_visit_request_trainee_user_id
+msgid "Authorized User"
+msgstr "صاحب الصلاحية"
+
+#. module: itq_visit_request_abstract
+#: selection:visit.request.abstract,visit_duration:0
+#: selection:visit.request.long,visit_duration:0
+#: selection:visit.request.trainee,visit_duration:0
+msgid "Both"
+msgstr "معا"
+
+#. module: itq_visit_request_abstract
+#: model:ir.ui.view,arch_db:itq_visit_request_abstract.approver_rejection_reason_wizard_form_view
+#: model:ir.ui.view,arch_db:itq_visit_request_abstract.review_rejection_reason_wizard_form_view
+#: model:ir.ui.view,arch_db:itq_visit_request_abstract.visit_request_abstract_form_view
+msgid "Cancel"
+msgstr "إلغاء"
+
+#. module: itq_visit_request_abstract
+#: selection:visit.request.abstract,state:0
+#: selection:visit.request.abstract.line,state:0
+#: selection:visit.request.concrete.long.line,state:0
+#: selection:visit.request.long,state:0
+#: selection:visit.request.trainee,state:0
+msgid "Cancelled"
+msgstr "ملغى"
+
+#. module: itq_visit_request_abstract
+#: model:ir.model.fields,field_description:itq_visit_request_abstract.field_visit_request_abstract_line_car_color
+#: model:ir.model.fields,field_description:itq_visit_request_abstract.field_visit_request_concrete_long_line_car_color_6143
+msgid "Car Color"
+msgstr "لون السيارة"
+
+#. module: itq_visit_request_abstract
+#: model:ir.model.fields,field_description:itq_visit_request_abstract.field_visit_request_abstract_line_car_model
+#: model:ir.model.fields,field_description:itq_visit_request_abstract.field_visit_request_concrete_long_line_car_model_6142
+msgid "Car Model"
+msgstr "طراز السيارة"
+
+#. module: itq_visit_request_abstract
+#: model:ir.model.fields,field_description:itq_visit_request_abstract.field_visit_request_abstract_line_car_sign
+#: model:ir.model.fields,field_description:itq_visit_request_abstract.field_visit_request_concrete_long_line_car_sign_6144
+msgid "Car Sign"
+msgstr "لوحة السيارة"
+
+#. module: itq_visit_request_abstract
+#: model:ir.model.fields,field_description:itq_visit_request_abstract.field_visit_request_abstract_line_car_type
+#: model:ir.model.fields,field_description:itq_visit_request_abstract.field_visit_request_concrete_long_line_car_type_6141
+msgid "Car Type"
+msgstr "نوع السيارة"
+
+#. module: itq_visit_request_abstract
+#: model:ir.model.fields,field_description:itq_visit_request_abstract.field_visit_request_abstract_company_id
+#: model:ir.model.fields,field_description:itq_visit_request_abstract.field_visit_request_long_company_id
+#: model:ir.model.fields,field_description:itq_visit_request_abstract.field_visit_request_trainee_company_id
+msgid "Company"
+msgstr "الشركة"
+
+#. module: itq_visit_request_abstract
+#: model:ir.model.fields,help:itq_visit_request_abstract.field_res_config_settings_forbidden_country_ids
+msgid "Countries that are not allowed to be selected in the visit request form."
+msgstr "حامل هذه الجنسية غير مصرح له بتقديم طلب زيارة."
+
+#. module: itq_visit_request_abstract
+#: model:ir.model.fields,field_description:itq_visit_request_abstract.field_visit_request_abstract_create_uid
+#: model:ir.model.fields,field_description:itq_visit_request_abstract.field_visit_request_abstract_line_create_uid
+msgid "Created by"
+msgstr "المنشئ"
+
+#. module: itq_visit_request_abstract
+#: model:ir.model.fields,field_description:itq_visit_request_abstract.field_visit_request_abstract_create_date
+#: model:ir.model.fields,field_description:itq_visit_request_abstract.field_visit_request_abstract_line_create_date
+msgid "Created on"
+msgstr "أنشئ في"
+
+#. module: itq_visit_request_abstract
+#: model:ir.model.fields,field_description:itq_visit_request_abstract.field_visit_request_abstract_display_name
+#: model:ir.model.fields,field_description:itq_visit_request_abstract.field_visit_request_abstract_line_display_name
+msgid "Display Name"
+msgstr "الاسم المعروض"
+
+#. module: itq_visit_request_abstract
+#: selection:visit.request.abstract,state:0
+#: selection:visit.request.abstract.line,state:0
+#: selection:visit.request.concrete.long.line,state:0
+#: selection:visit.request.long,state:0
+#: selection:visit.request.trainee,state:0
+msgid "Draft"
+msgstr "جديد"
+
+#. module: itq_visit_request_abstract
+#: model:ir.model.fields,field_description:itq_visit_request_abstract.field_visit_request_abstract_date_end
+#: model:ir.model.fields,field_description:itq_visit_request_abstract.field_visit_request_long_date_end
+#: model:ir.model.fields,field_description:itq_visit_request_abstract.field_visit_request_trainee_date_end
+msgid "End Date"
+msgstr "تاريخ الإنتهاء"
+
+#. module: itq_visit_request_abstract
+#: code:addons/itq_visit_request_abstract/models/visit_request_abstract.py:77
+#, python-format
+msgid "End Date cannot be in the past"
+msgstr "لا يمكن أن يكون تاريخ الإنتهاء في الماضي"
+
+#. module: itq_visit_request_abstract
+#: code:addons/itq_visit_request_abstract/models/visit_request_abstract.py:79
+#, python-format
+msgid "End Date must be after Start Date"
+msgstr "يجب أن يكون تاريخ الإنتهاء بعد تاريخ البدء"
+
+#. module: itq_visit_request_abstract
+#: model:ir.model.fields,field_description:itq_visit_request_abstract.field_res_config_settings_forbidden_country_ids
+#: model:ir.ui.view,arch_db:itq_visit_request_abstract.res_config_setting_visit_request_long_form_view
+msgid "Forbidden Countries"
+msgstr "الدول الممنوعة"
+
+#. module: itq_visit_request_abstract
+#: model:ir.ui.view,arch_db:itq_visit_request_abstract.res_config_setting_visit_request_long_form_view
+msgid "Format"
+msgstr "الهيئة"
+
+#. module: itq_visit_request_abstract
+#: model:ir.model.fields,field_description:itq_visit_request_abstract.field_visit_request_abstract_id
+#: model:ir.model.fields,field_description:itq_visit_request_abstract.field_visit_request_abstract_line_id
+msgid "ID"
+msgstr "المعرف"
+
+#. module: itq_visit_request_abstract
+#: model:ir.model.fields,field_description:itq_visit_request_abstract.field_visit_request_abstract___last_update
+#: model:ir.model.fields,field_description:itq_visit_request_abstract.field_visit_request_abstract_line___last_update
+msgid "Last Modified on"
+msgstr "آخر تعديل في"
+
+#. module: itq_visit_request_abstract
+#: model:ir.model.fields,field_description:itq_visit_request_abstract.field_visit_request_abstract_line_write_uid
+#: model:ir.model.fields,field_description:itq_visit_request_abstract.field_visit_request_abstract_write_uid
+msgid "Last Updated by"
+msgstr "آخر تحديث بواسطة"
+
+#. module: itq_visit_request_abstract
+#: model:ir.model.fields,field_description:itq_visit_request_abstract.field_visit_request_abstract_line_write_date
+#: model:ir.model.fields,field_description:itq_visit_request_abstract.field_visit_request_abstract_write_date
+msgid "Last Updated on"
+msgstr "آخر تحديث في"
+
+#. module: itq_visit_request_abstract
+#: selection:visit.request.abstract,visit_duration:0
+#: selection:visit.request.long,visit_duration:0
+#: selection:visit.request.trainee,visit_duration:0
+msgid "Morning"
+msgstr "صباحا"
+
+#. module: itq_visit_request_abstract
+#: model:ir.model.fields,field_description:itq_visit_request_abstract.field_visit_request_abstract_request_number
+#: model:ir.model.fields,field_description:itq_visit_request_abstract.field_visit_request_long_request_number
+#: model:ir.model.fields,field_description:itq_visit_request_abstract.field_visit_request_trainee_request_number
+msgid "Name"
+msgstr "الاسم"
+
+#. module: itq_visit_request_abstract
+#: model:ir.model.fields,field_description:itq_visit_request_abstract.field_visit_request_abstract_line_need_car_authorization
+#: model:ir.model.fields,field_description:itq_visit_request_abstract.field_visit_request_concrete_long_line_need_car_authorization_6140
+msgid "Need Car Authorization"
+msgstr "يتضمن تصريح سيارة؟"
+
+#. module: itq_visit_request_abstract
+#: code:addons/itq_visit_request_abstract/models/visit_request_abstract.py:14
+#, python-format
+msgid "New"
+msgstr "جديد"
+
+#. module: itq_visit_request_abstract
+#: selection:visit.request.abstract,visit_duration:0
+#: selection:visit.request.long,visit_duration:0
+#: selection:visit.request.trainee,visit_duration:0
+msgid "Night"
+msgstr "ليلا"
+
+#. module: itq_visit_request_abstract
+#: model:ir.ui.view,arch_db:itq_visit_request_abstract.approver_rejection_reason_wizard_form_view
+#: model:ir.ui.view,arch_db:itq_visit_request_abstract.review_rejection_reason_wizard_form_view
+msgid "Reject"
+msgstr "رفض"
+
+#. module: itq_visit_request_abstract
+#: selection:visit.request.abstract.line,state:0
+#: selection:visit.request.concrete.long.line,state:0
+msgid "Rejected"
+msgstr "مفروض"
+
+#. module: itq_visit_request_abstract
+#: model:ir.model,name:itq_visit_request_abstract.model_rejection_reason_wizard
+msgid "Rejection Reason"
+msgstr "سبب الرفض"
+
+#. module: itq_visit_request_abstract
+#: model:ir.model.fields,field_description:itq_visit_request_abstract.field_visit_request_abstract_date_request
+#: model:ir.model.fields,field_description:itq_visit_request_abstract.field_visit_request_long_date_request
+#: model:ir.model.fields,field_description:itq_visit_request_abstract.field_visit_request_trainee_date_request
+msgid "Request Date"
+msgstr "تاريخ الطلب"
+
+#. module: itq_visit_request_abstract
+#: model:ir.ui.view,arch_db:itq_visit_request_abstract.visit_request_abstract_form_view
+msgid "Request End Date"
+msgstr "تاريخ إنتهاء سريان التصريح"
+
+#. module: itq_visit_request_abstract
+#: model:ir.ui.view,arch_db:itq_visit_request_abstract.visit_request_abstract_form_view
+msgid "Request Information"
+msgstr "معلومات عامة عن الطلب"
+
+#. module: itq_visit_request_abstract
+#: model:ir.model.fields,field_description:itq_visit_request_abstract.field_visit_request_abstract_request_reason
+#: model:ir.model.fields,field_description:itq_visit_request_abstract.field_visit_request_long_request_reason
+#: model:ir.model.fields,field_description:itq_visit_request_abstract.field_visit_request_trainee_request_reason
+#: model:ir.ui.view,arch_db:itq_visit_request_abstract.visit_request_abstract_form_view
+msgid "Request Reason"
+msgstr "سبب تقديم الطلب"
+
+#. module: itq_visit_request_abstract
+#: model:ir.ui.view,arch_db:itq_visit_request_abstract.visit_request_abstract_form_view
+msgid "Request Start Date"
+msgstr "تاريخ بدأ سريان التصريح"
+
+#. module: itq_visit_request_abstract
+#: model:ir.model.fields,field_description:itq_visit_request_abstract.field_visit_request_abstract_hr_department_id
+#: model:ir.model.fields,field_description:itq_visit_request_abstract.field_visit_request_long_hr_department_id
+#: model:ir.model.fields,field_description:itq_visit_request_abstract.field_visit_request_trainee_hr_department_id
+msgid "Requester Unit"
+msgstr "الوحدة الطالبة"
+
+#. module: itq_visit_request_abstract
+#: model:ir.ui.view,arch_db:itq_visit_request_abstract.visit_request_abstract_form_view
+msgid "Return"
+msgstr "إرجاع"
+
+#. module: itq_visit_request_abstract
+#: selection:visit.request.abstract,state:0
+#: selection:visit.request.long,state:0
+#: selection:visit.request.trainee,state:0
+msgid "Returned"
+msgstr "مُرْجَعْ"
+
+#. module: itq_visit_request_abstract
+#: model:ir.actions.act_window,name:itq_visit_request_abstract.action_view_reviewer_rejection_reason_wizard
+msgid "Review Rejection Reason"
+msgstr "سبب رفض المُرَاجِع"
+
+#. module: itq_visit_request_abstract
+#: model:ir.ui.view,arch_db:itq_visit_request_abstract.visit_request_abstract_form_view
+msgid "Reviewer Reject"
+msgstr "رفض المُرَاجِع"
+
+#. module: itq_visit_request_abstract
+#: selection:visit.request.abstract,state:0
+#: selection:visit.request.long,state:0
+#: selection:visit.request.trainee,state:0
+msgid "Reviewer Rejected"
+msgstr "مرفوض من قبل المُرَاجِع"
+
+#. module: itq_visit_request_abstract
+#: model:ir.model.fields,field_description:itq_visit_request_abstract.field_rejection_reason_wizard_reviewer_rejection_reason
+#: model:ir.model.fields,field_description:itq_visit_request_abstract.field_visit_request_abstract_reviewer_rejection_reason
+#: model:ir.model.fields,field_description:itq_visit_request_abstract.field_visit_request_long_reviewer_rejection_reason
+#: model:ir.model.fields,field_description:itq_visit_request_abstract.field_visit_request_trainee_reviewer_rejection_reason
+msgid "Reviewer Rejection Reason"
+msgstr "سبب رفض المُرَاجِع"
+
+#. module: itq_visit_request_abstract
+#: model:ir.ui.view,arch_db:itq_visit_request_abstract.visit_request_abstract_form_view
+msgid "Send To Approve"
+msgstr "إرسال للإعتماد"
+
+#. module: itq_visit_request_abstract
+#: model:ir.ui.view,arch_db:itq_visit_request_abstract.visit_request_abstract_form_view
+msgid "Send to Review"
+msgstr "إرسال للمراجعة"
+
+#. module: itq_visit_request_abstract
+#: model:ir.model.fields,field_description:itq_visit_request_abstract.field_visit_request_abstract_line_sequence
+#: model:ir.model.fields,field_description:itq_visit_request_abstract.field_visit_request_concrete_long_line_sequence_6135
+msgid "Sequence"
+msgstr "التسلسل"
+
+#. module: itq_visit_request_abstract
+#: model:ir.ui.view,arch_db:itq_visit_request_abstract.visit_request_abstract_form_view
+msgid "Set To Draft"
+msgstr "عودة لجديد"
+
+#. module: itq_visit_request_abstract
+#: model:ir.ui.view,arch_db:itq_visit_request_abstract.res_config_setting_visit_request_long_form_view
+msgid "Set the paper format of printed documents"
+msgstr "إعداد التنسيق الورقي للمستندات المطبوعة"
+
+#. module: itq_visit_request_abstract
+#: model:ir.model.fields,field_description:itq_visit_request_abstract.field_visit_request_abstract_date_start
+#: model:ir.model.fields,field_description:itq_visit_request_abstract.field_visit_request_long_date_start
+#: model:ir.model.fields,field_description:itq_visit_request_abstract.field_visit_request_trainee_date_start
+msgid "Start Date"
+msgstr "تاريخ البدء"
+
+#. module: itq_visit_request_abstract
+#: code:addons/itq_visit_request_abstract/models/visit_request_abstract.py:75
+#, python-format
+msgid "Start Date must be at least today"
+msgstr "تاريخ بدأ سريان التصريح لابد أن يكون بتاريخ اليوم أو بعده."
+
+#. module: itq_visit_request_abstract
+#: code:addons/itq_visit_request_abstract/models/visit_request_abstract.py:73
+#, python-format
+msgid "Start Date must be before End Date"
+msgstr "تاريخ بدأ سريان التصريح لابد أن يكون قبل تاريخ انتهاء سريان التصريح."
+
+#. module: itq_visit_request_abstract
+#: model:ir.model.fields,field_description:itq_visit_request_abstract.field_visit_request_abstract_line_state
+#: model:ir.model.fields,field_description:itq_visit_request_abstract.field_visit_request_concrete_long_line_state_6145
+msgid "State"
+msgstr "الحالة"
+
+#. module: itq_visit_request_abstract
+#: model:ir.model.fields,field_description:itq_visit_request_abstract.field_visit_request_abstract_state
+#: model:ir.model.fields,field_description:itq_visit_request_abstract.field_visit_request_long_state
+#: model:ir.model.fields,field_description:itq_visit_request_abstract.field_visit_request_trainee_state
+msgid "Status"
+msgstr "الحالة "
+
+#. module: itq_visit_request_abstract
+#: selection:visit.request.abstract,state:0
+#: selection:visit.request.long,state:0
+#: selection:visit.request.trainee,state:0
+msgid "Under Approve"
+msgstr "معلق للإعتماد"
+
+#. module: itq_visit_request_abstract
+#: selection:visit.request.abstract,state:0
+#: selection:visit.request.abstract.line,state:0
+#: selection:visit.request.concrete.long.line,state:0
+#: selection:visit.request.long,state:0
+#: selection:visit.request.trainee,state:0
+msgid "Under Review"
+msgstr "معلق للمراجعة"
+
+#. module: itq_visit_request_abstract
+#: model:ir.model.fields,field_description:itq_visit_request_abstract.field_visit_request_abstract_visibility_flag
+#: model:ir.model.fields,field_description:itq_visit_request_abstract.field_visit_request_long_visibility_flag
+#: model:ir.model.fields,field_description:itq_visit_request_abstract.field_visit_request_trainee_visibility_flag
+msgid "Visibility Flag"
+msgstr "Visibility Flag"
+
+#. module: itq_visit_request_abstract
+#: model:ir.ui.view,arch_db:itq_visit_request_abstract.res_config_setting_visit_request_long_form_view
+msgid "Visit Configuration"
+msgstr "إعدادات الزيارات"
+
+#. module: itq_visit_request_abstract
+#: model:ir.model.fields,field_description:itq_visit_request_abstract.field_visit_request_abstract_visit_duration
+#: model:ir.model.fields,field_description:itq_visit_request_abstract.field_visit_request_long_visit_duration
+#: model:ir.model.fields,field_description:itq_visit_request_abstract.field_visit_request_trainee_visit_duration
+msgid "Visit Duration"
+msgstr "توقيت الزيارة"
+
+#. module: itq_visit_request_abstract
+#: model:ir.model,name:itq_visit_request_abstract.model_visit_request_abstract
+msgid "Visit Request Abstract"
+msgstr "طلب زيارة مجرد"
+
+#. module: itq_visit_request_abstract
+#: model:ir.model,name:itq_visit_request_abstract.model_visit_request_abstract_line
+msgid "Visit Request Abstract Line"
+msgstr "تفاصيل طلب الزيارة المجردة"
+
+#. module: itq_visit_request_abstract
+#: model:ir.ui.view,arch_db:itq_visit_request_abstract.res_config_setting_visit_request_long_form_view
+msgid "Visit Request Configuration"
+msgstr "اعدادات طلبات الزيارة"
+
+#. module: itq_visit_request_abstract
+#: model:ir.model.fields,field_description:itq_visit_request_abstract.field_visit_request_abstract_line_visitor_id_number
+#: model:ir.model.fields,field_description:itq_visit_request_abstract.field_visit_request_concrete_long_line_visitor_id_number_6137
+msgid "Visitor ID Number"
+msgstr "رقم هوية الزائر"
+
+#. module: itq_visit_request_abstract
+#: model:ir.model.fields,field_description:itq_visit_request_abstract.field_visit_request_abstract_line_visitor_name
+#: model:ir.model.fields,field_description:itq_visit_request_abstract.field_visit_request_concrete_long_line_visitor_name_6136
+msgid "Visitor Name"
+msgstr "إسم الزائر"
+
+#. module: itq_visit_request_abstract
+#: model:ir.model.fields,field_description:itq_visit_request_abstract.field_visit_request_abstract_line_country_id
+#: model:ir.model.fields,field_description:itq_visit_request_abstract.field_visit_request_concrete_long_line_country_id_6138
+msgid "Visitor Nationality"
+msgstr "جنسية الزائر"
+
+#. module: itq_visit_request_abstract
+#: model:ir.model.fields,field_description:itq_visit_request_abstract.field_visit_request_abstract_line_visitor_phone
+#: model:ir.model.fields,field_description:itq_visit_request_abstract.field_visit_request_concrete_long_line_visitor_phone_6139
+msgid "Visitor Phone"
+msgstr "رقم الجوال"
+
+#. module: itq_visit_request_abstract
+#: model:ir.model,name:itq_visit_request_abstract.model_res_config_settings
+msgid "res.config.settings"
+msgstr "الدقة.التكوين.إعدادات"
+
