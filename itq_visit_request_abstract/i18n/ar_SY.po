@@ -226,7 +226,7 @@ msgstr "آخر تحديث في"
 #: model:ir.model.fields,field_description:itq_visit_request_abstract.field_visit_request_abstract_line_is_legitimate
 #: model:ir.model.fields,field_description:itq_visit_request_abstract.field_visit_request_concrete_long_line_is_legitimate
 msgid "Legitimate for permission"
-msgstr "Legitimate for permission"
+msgstr "جاهز للتصريح"
 
 #. module: itq_visit_request_abstract
 #: selection:visit.request.abstract,visit_duration:0
