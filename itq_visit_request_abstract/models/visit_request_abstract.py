@@ -65,6 +65,8 @@ class VisitRequestAbstract(models.Model):
     def action_approve_reject(self):
         pass
 
+    def generate_permission(self):
+        pass
 
     @api.constrains('date_start', 'date_end')
     def _check_date(self):

@@ -26,6 +26,7 @@
         'data/ir_sequence.xml',
         'views/visit_request_long_views.xml',
         'views/action_visit_permission_views.xml',
+        'views/visit_request_long_line.xml',
         # report
         'reports/visit_request_long_report.xml'
     ],

@@ -27,6 +27,8 @@
                             string="Approver Reject"/>
                     <button class="btn btn-primary" name="action_approve" type="object" states="under_approve"
                             string="Approve"/>
+                    <button class="btn btn-primary" name="generate_permission" type="object" states="approved"
+                            string="Generate Permissions"/>
                 </header>
                 <sheet>
                      <div class="oe_button_box" name="button_box">

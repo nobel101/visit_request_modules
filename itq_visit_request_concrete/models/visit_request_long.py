@@ -102,34 +102,59 @@ class VisitRequestLong(models.Model):
             'target': 'main',
             'domain': [('state', '=', 'draft')],
         }
+    def generate_permission(self):
+        for record in self:
+            for line in record.visit_request_long_line_ids.filtered(lambda l:l.is_legitimate == True):
+                record.state = 'approved'
+                self.env['visit.permission'].sudo().create({
+                    'name': 'Permission Number ' + record.request_number or ''+ ' For ' + line.visitor_name or '',
+                    'visit_request_id': record.id,
+                    'date_start': record.date_start,
+                    'date_end': record.date_end,
+                    'visit_duration': record.visit_duration,
+                    'hr_department_id': record.hr_department_id.id,
+                    'user_id': record.user_id.id,
+                    'date_request': record.date_request,
+                    'request_reason': record.request_reason,
+                    'visitor_name': line.visitor_name,
+                    'visitor_id': line.visitor_id_number,
+                    'visitor_phone': line.visitor_phone,
+                    'country_id':line.country_id.id,
+                    'need_car_authorization': line.need_car_authorization,
+                    'car_model': line.car_model,
+                    'car_sign': line.car_sign,
+                    'car_color': line.car_color,
+                    'car_type': line.car_type,
+                })
 
     def action_approve(self):
         res = super(VisitRequestLong, self).action_approve()
         for record in self:
-            for line in record.visit_request_long_line_ids:
-                if (line.state in ['approved','under_review']) and record.state == 'under_approve':
-                    self.env['visit.permission'].sudo().create({
-                        'name': 'Permission Number ' + record.request_number or ''+ ' For ' + line.visitor_name or '',
-                        'visit_request_id': record.id,
-                        'date_start': record.date_start,
-                        'date_end': record.date_end,
-                        'visit_duration': record.visit_duration,
-                        'hr_department_id': record.hr_department_id.id,
-                        'user_id': record.user_id.id,
-                        'date_request': record.date_request,
-                        'request_reason': record.request_reason,
-                        'visitor_name': line.visitor_name,
-                        'visitor_id': line.visitor_id_number,
-                        'visitor_phone': line.visitor_phone,
-                        'country_id':line.country_id.id,
-                        'need_car_authorization': line.need_car_authorization,
-                        'car_model': line.car_model,
-                        'car_sign': line.car_sign,
-                        'car_color': line.car_color,
-                        'car_type': line.car_type,
-                    })
-                else:
-                    continue
+            # for line in record.visit_request_long_line_ids:
+            #     if (line.state in ['approved','under_review']) and record.state == 'under_approve':
+            #         record.state = 'approved'
+                    # self.env['visit.permission'].sudo().create({
+                    #     'name': 'Permission Number ' + record.request_number or ''+ ' For ' + line.visitor_name or '',
+                    #     'visit_request_id': record.id,
+                    #     'date_start': record.date_start,
+                    #     'date_end': record.date_end,
+                    #     'visit_duration': record.visit_duration,
+                    #     'hr_department_id': record.hr_department_id.id,
+                    #     'user_id': record.user_id.id,
+                    #     'date_request': record.date_request,
+                    #     'request_reason': record.request_reason,
+                    #     'visitor_name': line.visitor_name,
+                    #     'visitor_id': line.visitor_id_number,
+                    #     'visitor_phone': line.visitor_phone,
+                    #     'country_id':line.country_id.id,
+                    #     'need_car_authorization': line.need_car_authorization,
+                    #     'car_model': line.car_model,
+                    #     'car_sign': line.car_sign,
+                    #     'car_color': line.car_color,
+                    #     'car_type': line.car_type,
+                    # })
+                # else:
+                #     continue
             record.state = 'approved'
             record.visit_request_long_line_ids.filtered(lambda rec: rec.state == 'under_review').write({'state': 'approved'})
         return {

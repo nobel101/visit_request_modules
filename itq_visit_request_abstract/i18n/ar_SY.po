@@ -6,8 +6,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Odoo Server 11.0\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2023-01-31 09:25+0000\n"
-"PO-Revision-Date: 2023-01-31 09:25+0000\n"
+"POT-Creation-Date: 2023-02-01 10:35+0000\n"
+"PO-Revision-Date: 2023-02-01 10:35+0000\n"
 "Last-Translator: <>\n"
 "Language-Team: \n"
 "MIME-Version: 1.0\n"
@@ -21,9 +21,14 @@ msgid "<span class=\"fa fa-lg fa-building-o\" title=\"Values set here are compan
 msgstr "<span class=\"fa fa-lg fa-building-o\" title=\"Values set here are company-specific.\" groups=\"base.group_multi_company\"/>"
 
 #. module: itq_visit_request_abstract
+#: model:ir.model.fields,field_description:itq_visit_request_abstract.field_visit_request_concrete_long_line_visit_additional_item_ids
+msgid "Additional Items"
+msgstr "مقتنيات إضافية"
+
+#. module: itq_visit_request_abstract
 #: model:ir.ui.view,arch_db:itq_visit_request_abstract.visit_request_abstract_form_view
 msgid "Approve"
-msgstr "موافقة"
+msgstr "موافقه"
 
 #. module: itq_visit_request_abstract
 #: selection:visit.request.abstract,state:0
@@ -130,18 +135,21 @@ msgid "Countries that are not allowed to be selected in the visit request form."
 msgstr "حامل هذه الجنسية غير مصرح له بتقديم طلب زيارة."
 
 #. module: itq_visit_request_abstract
+#: model:ir.model.fields,field_description:itq_visit_request_abstract.field_visit_additional_items_create_uid
 #: model:ir.model.fields,field_description:itq_visit_request_abstract.field_visit_request_abstract_create_uid
 #: model:ir.model.fields,field_description:itq_visit_request_abstract.field_visit_request_abstract_line_create_uid
 msgid "Created by"
-msgstr "المنشئ"
+msgstr "أنشئ بواسطة"
 
 #. module: itq_visit_request_abstract
+#: model:ir.model.fields,field_description:itq_visit_request_abstract.field_visit_additional_items_create_date
 #: model:ir.model.fields,field_description:itq_visit_request_abstract.field_visit_request_abstract_create_date
 #: model:ir.model.fields,field_description:itq_visit_request_abstract.field_visit_request_abstract_line_create_date
 msgid "Created on"
 msgstr "أنشئ في"
 
 #. module: itq_visit_request_abstract
+#: model:ir.model.fields,field_description:itq_visit_request_abstract.field_visit_additional_items_display_name
 #: model:ir.model.fields,field_description:itq_visit_request_abstract.field_visit_request_abstract_display_name
 #: model:ir.model.fields,field_description:itq_visit_request_abstract.field_visit_request_abstract_line_display_name
 msgid "Display Name"
@@ -187,28 +195,38 @@ msgid "Format"
 msgstr "الهيئة"
 
 #. module: itq_visit_request_abstract
+#: model:ir.model.fields,field_description:itq_visit_request_abstract.field_visit_additional_items_id
 #: model:ir.model.fields,field_description:itq_visit_request_abstract.field_visit_request_abstract_id
 #: model:ir.model.fields,field_description:itq_visit_request_abstract.field_visit_request_abstract_line_id
 msgid "ID"
 msgstr "المعرف"
 
 #. module: itq_visit_request_abstract
+#: model:ir.model.fields,field_description:itq_visit_request_abstract.field_visit_additional_items___last_update
 #: model:ir.model.fields,field_description:itq_visit_request_abstract.field_visit_request_abstract___last_update
 #: model:ir.model.fields,field_description:itq_visit_request_abstract.field_visit_request_abstract_line___last_update
 msgid "Last Modified on"
 msgstr "آخر تعديل في"
 
 #. module: itq_visit_request_abstract
+#: model:ir.model.fields,field_description:itq_visit_request_abstract.field_visit_additional_items_write_uid
 #: model:ir.model.fields,field_description:itq_visit_request_abstract.field_visit_request_abstract_line_write_uid
 #: model:ir.model.fields,field_description:itq_visit_request_abstract.field_visit_request_abstract_write_uid
 msgid "Last Updated by"
 msgstr "آخر تحديث بواسطة"
 
 #. module: itq_visit_request_abstract
+#: model:ir.model.fields,field_description:itq_visit_request_abstract.field_visit_additional_items_write_date
 #: model:ir.model.fields,field_description:itq_visit_request_abstract.field_visit_request_abstract_line_write_date
 #: model:ir.model.fields,field_description:itq_visit_request_abstract.field_visit_request_abstract_write_date
 msgid "Last Updated on"
 msgstr "آخر تحديث في"
+
+#. module: itq_visit_request_abstract
+#: model:ir.model.fields,field_description:itq_visit_request_abstract.field_visit_request_abstract_line_is_legitimate
+#: model:ir.model.fields,field_description:itq_visit_request_abstract.field_visit_request_concrete_long_line_is_legitimate
+msgid "Legitimate for permission"
+msgstr "Legitimate for permission"
 
 #. module: itq_visit_request_abstract
 #: selection:visit.request.abstract,visit_duration:0
@@ -218,6 +236,7 @@ msgid "Morning"
 msgstr "صباحا"
 
 #. module: itq_visit_request_abstract
+#: model:ir.model.fields,field_description:itq_visit_request_abstract.field_visit_additional_items_name
 #: model:ir.model.fields,field_description:itq_visit_request_abstract.field_visit_request_abstract_request_number
 #: model:ir.model.fields,field_description:itq_visit_request_abstract.field_visit_request_long_request_number
 #: model:ir.model.fields,field_description:itq_visit_request_abstract.field_visit_request_trainee_request_number
@@ -242,6 +261,11 @@ msgstr "جديد"
 #: selection:visit.request.trainee,visit_duration:0
 msgid "Night"
 msgstr "ليلا"
+
+#. module: itq_visit_request_abstract
+#: model:ir.model.fields,field_description:itq_visit_request_abstract.field_visit_additional_items_quantity
+msgid "Quantity"
+msgstr "كمية"
 
 #. module: itq_visit_request_abstract
 #: model:ir.ui.view,arch_db:itq_visit_request_abstract.approver_rejection_reason_wizard_form_view
@@ -416,6 +440,11 @@ msgid "Visibility Flag"
 msgstr "Visibility Flag"
 
 #. module: itq_visit_request_abstract
+#: model:ir.model,name:itq_visit_request_abstract.model_visit_additional_items
+msgid "Visit Additional Items"
+msgstr "مقتنيات الزيارة"
+
+#. module: itq_visit_request_abstract
 #: model:ir.ui.view,arch_db:itq_visit_request_abstract.res_config_setting_visit_request_long_form_view
 msgid "Visit Configuration"
 msgstr "إعدادات الزيارات"
@@ -441,6 +470,11 @@ msgstr "تفاصيل طلب الزيارة المجردة"
 #: model:ir.ui.view,arch_db:itq_visit_request_abstract.res_config_setting_visit_request_long_form_view
 msgid "Visit Request Configuration"
 msgstr "اعدادات طلبات الزيارة"
+
+#. module: itq_visit_request_abstract
+#: model:ir.model.fields,field_description:itq_visit_request_abstract.field_visit_additional_items_visit_request_line_id
+msgid "Visit Request Line"
+msgstr "تفاصيل الزيارة"
 
 #. module: itq_visit_request_abstract
 #: model:ir.model.fields,field_description:itq_visit_request_abstract.field_visit_request_abstract_line_visitor_id_number

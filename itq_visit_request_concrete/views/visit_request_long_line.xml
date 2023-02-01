@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<odoo>
+    <record model="ir.ui.view" id="visit_request_long_line_form_view">
+        <field name="name">visit.request.long.line.form.view</field>
+        <field name="model">visit.request.concrete.long.line</field>
+        <field name="arch" type="xml">
+            <form>
+                <sheet>
+                    <group>
+                        <group string="Visitor Information">
+                            <field name="sequence" invisible="True"/>
+                            <field name="visitor_id_number"/>
+                            <field name="visitor_name"/>
+                            <field name="country_id"/>
+                            <field name="visitor_phone"/>
+                            <field name="need_car_authorization"/>
+                            <field name="is_legitimate"/>
+                        </group>
+                        <group string="Car Information" attrs="{'invisible':[('need_car_authorization','=',False)]}">
+                            <field name="car_type" attrs="{'required':[('need_car_authorization','=',True)],'invisible':[('need_car_authorization','=',False)]}"/>
+                            <field name="car_model" attrs="{'required':[('need_car_authorization','=',True)],'invisible':[('need_car_authorization','=',False)]}"/>
+                            <field name="car_sign" attrs="{'required':[('need_car_authorization','=',True)],'invisible':[('need_car_authorization','=',False)]}"/>
+                            <field name="car_color" attrs="{'required':[('need_car_authorization','=',True)],'invisible':[('need_car_authorization','=',False)]}"/>
+                        </group>
+                    </group>
+                    <notebook>
+                        <page string="Additional Items">
+                            <field name="visit_additional_item_ids">
+                                <tree editable="bottom">
+                                    <field name="name"/>
+                                    <field name="quantity"/>
+                                </tree>
+                            </field>
+                        </page>
+                    </notebook>
+                </sheet>
+            </form>
+        </field>
+    </record>
+</odoo>

@@ -16,12 +16,13 @@
                 <page name="visitor_lines" string="Visit Request Lines">
                     <field name="visit_request_long_line_ids"
                            attrs="{'readonly': [('state', 'not in', ['draft','returned'])]}">
-                        <tree editable="bottom">
-                            <field name="sequence" widget="handle"/>
+                        <tree>
+                            <field name="sequence" widget="handle" readonly="True"/>
                             <field name="visitor_name"/>
                             <field name="visitor_id_number"/>
                             <field name="country_id"/>
                             <field name="visitor_phone"/>
+                            <field name="visit_additional_item_ids" widget="many2many_tags"/>
                             <field name="need_car_authorization"/>
                             <field name="car_type"
                                    attrs="{'required':[('need_car_authorization','=',True)],'readonly':[('need_car_authorization','=',False)]}"/>
@@ -32,8 +33,7 @@
                             <field name="car_sign"
                                    attrs="{'required':[('need_car_authorization','=',True)],'readonly':[('need_car_authorization','=',False)]}"/>
                             <field name="state"/>
-                            <button name="action_line_approve" type="object" string="Approve"
-                                    attrs="{'invisible': ['|',('parent.state', '!=','under_approve'),('state','!=','under_review')]}"/>
+                            <field name="is_legitimate"/>
                             <button name="action_line_reject" type="object" string="Reject"
                                     attrs="{'invisible': ['|',('parent.state', '!=','under_approve'),('state','!=','under_review')]}"/>
                         </tree>
@@ -174,4 +174,6 @@
               action="visit_request_long_canceled_window_action" name="Canceled Requests"/>
     <menuitem id="visit_request_approved_review_menu" parent="sub_menu_visit_request_long_requester"
               action="visit_request_long_approved_window_action" name="Approved Requests"/>
+    <menuitem id="visit_request_approved_review_menu_ready_for_permission" parent="sub_menu_visit_request_long_approver"
+          action="visit_request_long_approved_window_action" name="Approved Requests"/>
 </odoo>

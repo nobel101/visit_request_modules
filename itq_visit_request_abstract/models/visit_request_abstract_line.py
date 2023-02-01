@@ -1,3 +1,5 @@
+from xml import etree
+
 from odoo import api, fields, models
 
 
@@ -9,7 +11,7 @@ class VisitRequestAbstract(models.Model):
     def _get_forbidden_country_ids(self):
         country_ids = self.env['ir.config_parameter'].sudo().get_param('forbidden_country_ids')
         return [('id','not in',country_ids)]
-    sequence = fields.Integer(string='Sequence',default=10)
+    sequence = fields.Integer(string='Sequence',default=10,readonly=True)
     visitor_name = fields.Char(string='Visitor Name', required=True)
     visitor_id_number = fields.Char(string='Visitor ID Number', required=True)
     country_id = fields.Many2one('res.country', string='Visitor Nationality', required=True,domain=_get_forbidden_country_ids)
@@ -27,6 +29,7 @@ class VisitRequestAbstract(models.Model):
                              readonly=True,
                              default='draft'
                              )
+    is_legitimate = fields.Boolean(string='Legitimate for permission',default=True)
 
     def action_line_approve(self):
         pass

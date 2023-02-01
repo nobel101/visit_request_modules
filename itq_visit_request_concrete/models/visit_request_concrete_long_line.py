@@ -7,7 +7,7 @@ class VisitRequestLongLineConcrete(models.Model):
     _inherit = ['visit.request.abstract.line']
 
     long_visit_request_id = fields.Many2one('visit.request.long', string='Visitor Request')
-
+    visit_additional_item_ids = fields.One2many('visit.additional.items', 'visit_request_line_id', string='Additional Items')
 
     def action_line_approve(self):
         for record in self:
@@ -26,22 +26,33 @@ class VisitRequestLongLineConcrete(models.Model):
 
     def action_line_reject(self):
         for record in self:
+            # if max(record.long_visit_request_id.visit_request_long_line_ids.mapped('sequence')) == record.sequence \
+            #         and record.long_visit_request_id.state == 'under_approve' and record.state == 'under_review' \
+            #         and any(line.state in ['under_review', 'draft'] for line in
+            #                 record.long_visit_request_id.visit_request_long_line_ids):
+            #     record.state = 'rejected'
+            #     record.long_visit_request_id.action_approve()
+            #     if record.long_visit_request_id.state in ['under_approve','under_review']:
+            #         record.state = 'rejected'
+            #     else:
+            #         if any(line.state == 'approved' for line in record.long_visit_request_id.visit_request_long_line_ids):
+            #             record.long_visit_request_id.action_approve()
+            #         record.state = 'rejected'
+            # else:
+            #     if record.state == 'under_review':
+            #         record.state = 'rejected'
             if max(record.long_visit_request_id.visit_request_long_line_ids.mapped('sequence')) == record.sequence \
                     and record.long_visit_request_id.state == 'under_approve' and record.state == 'under_review' \
                     and any(line.state in ['under_review', 'draft'] for line in
                             record.long_visit_request_id.visit_request_long_line_ids):
                 record.state = 'rejected'
-                record.long_visit_request_id.action_approve()
-                if record.long_visit_request_id.state in ['under_approve','under_review']:
-                    record.state = 'rejected'
-                else:
-                    if any(line.state == 'approved' for line in record.long_visit_request_id.visit_request_long_line_ids):
-                        record.long_visit_request_id.action_approve()
-                    record.state = 'rejected'
+                record.is_legitimate = False
+                record.long_visit_request_id.action_approve_reject()
+            elif record.state == 'under_review':
+                record.state = 'rejected'
+                record.is_legitimate = False
             else:
-                if record.state == 'under_review':
-                    record.state = 'rejected'
-
+                continue
         return super(VisitRequestLongLineConcrete, self).action_line_reject()
 
     @api.model

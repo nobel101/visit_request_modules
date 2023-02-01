@@ -6,8 +6,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Odoo Server 11.0\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2023-01-31 10:10+0000\n"
-"PO-Revision-Date: 2023-01-31 10:10+0000\n"
+"POT-Creation-Date: 2023-02-01 10:23+0000\n"
+"PO-Revision-Date: 2023-02-01 10:23+0000\n"
 "Last-Translator: <>\n"
 "Language-Team: \n"
 "MIME-Version: 1.0\n"
@@ -54,12 +54,17 @@ msgid "<strong>Note: </strong>"
 msgstr "<strong>Note: </strong>"
 
 #. module: itq_visit_request_concrete
+#: model:ir.ui.view,arch_db:itq_visit_request_concrete.visit_request_long_line_form_view
+msgid "Additional Items"
+msgstr "مقتنيات الزائر"
+
+#. module: itq_visit_request_concrete
 #: model:ir.ui.view,arch_db:itq_visit_request_concrete.visit_request_long_form_view
 msgid "Approve"
 msgstr "موافقة"
 
 #. module: itq_visit_request_concrete
-#: code:addons/itq_visit_request_concrete/models/visit_request_long.py:137
+#: code:addons/itq_visit_request_concrete/models/visit_request_long.py:138
 #, python-format
 msgid "Approved Long Visit Requests"
 msgstr "طلبات التصريح طويلة المدة (معتدة)"
@@ -80,7 +85,7 @@ msgid "Approver"
 msgstr "المُعْتمد"
 
 #. module: itq_visit_request_concrete
-#: code:addons/itq_visit_request_concrete/models/visit_request_long.py:171
+#: code:addons/itq_visit_request_concrete/models/visit_request_long.py:172
 #, python-format
 msgid "Approver Rejected Long Visit Requests"
 msgstr "طلبات طويلة المدة رفضهاالمُعْتمِد"
@@ -125,6 +130,11 @@ msgid "Car Color"
 msgstr "لون السيارة"
 
 #. module: itq_visit_request_concrete
+#: model:ir.ui.view,arch_db:itq_visit_request_concrete.visit_request_long_line_form_view
+msgid "Car Information"
+msgstr "معلومات السيارة"
+
+#. module: itq_visit_request_concrete
 #: model:ir.model.fields,field_description:itq_visit_request_concrete.field_visit_permission_car_model
 msgid "Car Model"
 msgstr "طراز السيارة"
@@ -149,7 +159,7 @@ msgstr "دولة"
 #: model:ir.model.fields,field_description:itq_visit_request_concrete.field_visit_permission_create_uid
 #: model:ir.model.fields,field_description:itq_visit_request_concrete.field_visit_request_concrete_long_line_create_uid
 msgid "Created by"
-msgstr "المنشئ"
+msgstr "أنشئ بواسطة"
 
 #. module: itq_visit_request_concrete
 #: model:ir.model.fields,field_description:itq_visit_request_concrete.field_rejection_reason_wizard_create_date
@@ -191,21 +201,21 @@ msgstr "المعرف"
 #: model:ir.model.fields,field_description:itq_visit_request_concrete.field_visit_request_long___last_update
 #: model:ir.model.fields,field_description:itq_visit_request_concrete.field_visit_request_trainee___last_update
 msgid "Last Modified on"
-msgstr "عٌدل لأخر مرة في"
+msgstr "آخر تعديل في"
 
 #. module: itq_visit_request_concrete
 #: model:ir.model.fields,field_description:itq_visit_request_concrete.field_rejection_reason_wizard_write_uid
 #: model:ir.model.fields,field_description:itq_visit_request_concrete.field_visit_permission_write_uid
 #: model:ir.model.fields,field_description:itq_visit_request_concrete.field_visit_request_concrete_long_line_write_uid
 msgid "Last Updated by"
-msgstr "المغير"
+msgstr "آخر تحديث بواسطة"
 
 #. module: itq_visit_request_concrete
 #: model:ir.model.fields,field_description:itq_visit_request_concrete.field_rejection_reason_wizard_write_date
 #: model:ir.model.fields,field_description:itq_visit_request_concrete.field_visit_permission_write_date
 #: model:ir.model.fields,field_description:itq_visit_request_concrete.field_visit_request_concrete_long_line_write_date
 msgid "Last Updated on"
-msgstr "تغير في"
+msgstr "آخر تحديث في"
 
 #. module: itq_visit_request_concrete
 #: model:ir.actions.report,name:itq_visit_request_concrete.long_visit_permission_pdf_report
@@ -229,8 +239,8 @@ msgid "Need Car Authorization"
 msgstr "يتضمن تصريح سيارة؟"
 
 #. module: itq_visit_request_concrete
-#: code:addons/itq_visit_request_concrete/models/visit_request_long.py:181
 #: code:addons/itq_visit_request_concrete/models/visit_request_long.py:182
+#: code:addons/itq_visit_request_concrete/models/visit_request_long.py:183
 #, python-format
 msgid "New"
 msgstr "جديد"
@@ -318,7 +328,7 @@ msgid "Reviewer"
 msgstr "المراجع"
 
 #. module: itq_visit_request_concrete
-#: code:addons/itq_visit_request_concrete/models/visit_request_long.py:156
+#: code:addons/itq_visit_request_concrete/models/visit_request_long.py:157
 #, python-format
 msgid "Reviewer Long Visit Requests"
 msgstr "مراجع الطلبات طويلة المدة"
@@ -338,7 +348,7 @@ msgstr "الطلب"
 #. module: itq_visit_request_concrete
 #: model:ir.model.fields,field_description:itq_visit_request_concrete.field_visit_permission_date_start
 msgid "Start Date"
-msgstr "تاريخ بدأ سريان التصريح"
+msgstr "تاريخ البدء"
 
 #. module: itq_visit_request_concrete
 #: model:ir.actions.act_window,help:itq_visit_request_concrete.visit_request_long_approved_window_action
@@ -380,6 +390,11 @@ msgid "Under approve Requests"
 msgstr "طلبات معلقة للإعتماد"
 
 #. module: itq_visit_request_concrete
+#: model:ir.model,name:itq_visit_request_concrete.model_visit_additional_items
+msgid "Visit Additional Items"
+msgstr "مقتنيات الزيارة"
+
+#. module: itq_visit_request_concrete
 #: model:ir.model.fields,field_description:itq_visit_request_concrete.field_visit_permission_visit_duration
 msgid "Visit Duration"
 msgstr "توقيت الزيارة"
@@ -418,6 +433,11 @@ msgid "Visitor ID"
 msgstr "هوية الزائر"
 
 #. module: itq_visit_request_concrete
+#: model:ir.ui.view,arch_db:itq_visit_request_concrete.visit_request_long_line_form_view
+msgid "Visitor Information"
+msgstr "معلومات الزائر"
+
+#. module: itq_visit_request_concrete
 #: model:ir.model.fields,field_description:itq_visit_request_concrete.field_visit_permission_visitor_name
 msgid "Visitor Name"
 msgstr "إسم الزائر"
@@ -439,7 +459,7 @@ msgid "You cannot confirm a visit request without lines."
 msgstr "لا يمكن إرساله للإعتماد بدون بيانات في تفاصيل الطلب."
 
 #. module: itq_visit_request_concrete
-#: code:addons/itq_visit_request_concrete/models/visit_request_long.py:184
+#: code:addons/itq_visit_request_concrete/models/visit_request_long.py:185
 #, python-format
 msgid "You cannot create a visit request without lines."
 msgstr "لا يمكن إنشاء طلب زيارة بدون بيانات في تفاصيل الطلب."
@@ -503,8 +523,3 @@ msgstr "رقم الهوية"
 #: model:ir.ui.view,arch_db:itq_visit_request_concrete.long_visit_permission_report
 msgid "نوع السيارة"
 msgstr "نوع السيارة"
-
-#. module: itq_visit_request_concrete
-#: model:ir.actions.act_window,help:itq_visit_request_concrete.visit_request_long_window_action
-msgid "Click here to add new %s"
-msgstr "إنشاء يقوم بإنشاء طلب جديد يعرض هنا."
