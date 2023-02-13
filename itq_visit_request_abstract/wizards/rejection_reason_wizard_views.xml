@@ -6,7 +6,7 @@
                 <field name="arch" type="xml">
                     <form>
                         <group>
-                            <field name="reviewer_rejection_reason"/>
+                            <field name="reviewer_rejection_reason" required="True"/>
                         </group>
                         <footer>
                             <button name="action_review_reject" string="Reject" type="object" class="oe_highlight"/>
@@ -21,7 +21,7 @@
                 <field name="arch" type="xml">
                     <form>
                         <group>
-                            <field name="approver_rejection_reason"/>
+                            <field name="approver_rejection_reason" required="True"/>
                         </group>
                         <footer>
                             <button name="action_approve_reject" string="Reject" type="object" class="oe_highlight"/>

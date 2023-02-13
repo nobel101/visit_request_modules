@@ -1,0 +1,364 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+#	* itq_vehicle_visit_request
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 11.0\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2023-02-13 10:24+0000\n"
+"PO-Revision-Date: 2023-02-13 10:24+0000\n"
+"Last-Translator: <>\n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: \n"
+"Plural-Forms: \n"
+
+#. module: itq_vehicle_visit_request
+#: model:ir.model.fields,field_description:itq_vehicle_visit_request.field_vehicle_visit_request_line_visit_additional_item_ids
+#: model:ir.ui.view,arch_db:itq_vehicle_visit_request.visit_request_long_line_form_view
+msgid "Additional Items"
+msgstr "مقتنيات إضافية"
+
+#. module: itq_vehicle_visit_request
+#: model:ir.actions.act_window,name:itq_vehicle_visit_request.approved_vehicle_visit_request_action
+#: model:ir.ui.menu,name:itq_vehicle_visit_request.approved_vehicle_visit_request_menu
+msgid "Approved Vehicle Visit Request"
+msgstr "طلب تصريح زيارة مركبات معتمد"
+
+#. module: itq_vehicle_visit_request
+#: code:addons/itq_vehicle_visit_request/models/vehicle_visit_request.py:112
+#, python-format
+msgid "Approved Vehicle Visit Requests"
+msgstr "الطلبات المعتمدة لزيارة المركبات"
+
+#. module: itq_vehicle_visit_request
+#: model:ir.ui.menu,name:itq_vehicle_visit_request.vehicle_visit_approver_menu
+msgid "Approver"
+msgstr "المُعْتمد"
+
+#. module: itq_vehicle_visit_request
+#: model:ir.ui.menu,name:itq_vehicle_visit_request.vehicle_visit_request_approve_reject_menu
+msgid "Approver Rejected Requests"
+msgstr "طلبات رفضهاالمُعْتمِد"
+
+#. module: itq_vehicle_visit_request
+#: model:ir.actions.act_window,name:itq_vehicle_visit_request.approver_rejected_vehicle_visit_request_action
+msgid "Approver Rejected Vehicle Visit Request"
+msgstr "طلبات زيارة مركبات رفضها المعتمد"
+
+#. module: itq_vehicle_visit_request
+#: code:addons/itq_vehicle_visit_request/models/vehicle_visit_request.py:82
+#, python-format
+msgid "Approver Rejected Vehicle Visit Requests"
+msgstr "طلبات زيارة مركبات رفضها المعتمد"
+
+#. module: itq_vehicle_visit_request
+#: model:ir.actions.act_window,name:itq_vehicle_visit_request.canceled_vehicle_visit_request_action
+msgid "Canceled Long Visit Request"
+msgstr "طلب طويل المدة ملغى"
+
+#. module: itq_vehicle_visit_request
+#: model:ir.ui.menu,name:itq_vehicle_visit_request.vehicle_visit_request_canceled_review_menu
+msgid "Canceled Requests"
+msgstr "طلبات ملغاة"
+
+#. module: itq_vehicle_visit_request
+#: code:addons/itq_vehicle_visit_request/models/vehicle_visit_request.py:97
+#, python-format
+msgid "Cancelled Vehicle Visit Requests"
+msgstr "طلبات زيارة مركبات ملغاة"
+
+#. module: itq_vehicle_visit_request
+#: model:ir.model.fields,field_description:itq_vehicle_visit_request.field_vehicle_visit_request_create_uid
+#: model:ir.model.fields,field_description:itq_vehicle_visit_request.field_vehicle_visit_request_line_create_uid
+msgid "Created by"
+msgstr "أنشئ بواسطة"
+
+#. module: itq_vehicle_visit_request
+#: model:ir.model.fields,field_description:itq_vehicle_visit_request.field_vehicle_visit_request_create_date
+#: model:ir.model.fields,field_description:itq_vehicle_visit_request.field_vehicle_visit_request_line_create_date
+msgid "Created on"
+msgstr "أنشئ في"
+
+#. module: itq_vehicle_visit_request
+#: model:ir.model.fields,field_description:itq_vehicle_visit_request.field_visit_permission_vehicle_visit_id
+msgid "Daily Visit Request"
+msgstr "طلب تصريح زيارة يومي"
+
+#. module: itq_vehicle_visit_request
+#: model:ir.model.fields,field_description:itq_vehicle_visit_request.field_vehicle_visit_request_display_name
+#: model:ir.model.fields,field_description:itq_vehicle_visit_request.field_vehicle_visit_request_line_display_name
+msgid "Display Name"
+msgstr "الاسم المعروض"
+
+#. module: itq_vehicle_visit_request
+#: model:ir.model.fields,field_description:itq_vehicle_visit_request.field_vehicle_visit_request_line_driver_type
+msgid "Driver"
+msgstr "السائق"
+
+#. module: itq_vehicle_visit_request
+#: model:ir.ui.view,arch_db:itq_vehicle_visit_request.visit_request_long_line_form_view
+msgid "Driver Information"
+msgstr "معلومات السائق"
+
+#. module: itq_vehicle_visit_request
+#: model:ir.model.fields,field_description:itq_vehicle_visit_request.field_vehicle_visit_request_driver_name
+#: model:ir.ui.view,arch_db:itq_vehicle_visit_request.visit_request_long_line_form_view
+msgid "Driver Name"
+msgstr "إسم السائق"
+
+#. module: itq_vehicle_visit_request
+#: model:ir.ui.view,arch_db:itq_vehicle_visit_request.visit_request_long_line_form_view
+msgid "Driver Nationality"
+msgstr "جنسية السائق"
+
+#. module: itq_vehicle_visit_request
+#: model:ir.ui.view,arch_db:itq_vehicle_visit_request.visit_request_long_line_form_view
+msgid "Driver Number"
+msgstr "رقم السائق"
+
+#. module: itq_vehicle_visit_request
+#: model:ir.ui.view,arch_db:itq_vehicle_visit_request.visit_request_long_line_form_view
+msgid "Driver Phone"
+msgstr "جوال السائق"
+
+#. module: itq_vehicle_visit_request
+#: selection:vehicle.visit.request.line,driver_type:0
+msgid "Employee"
+msgstr "موظف"
+
+#. module: itq_vehicle_visit_request
+#: selection:vehicle.visit.request.line,driver_type:0
+msgid "External"
+msgstr "منتدب"
+
+#. module: itq_vehicle_visit_request
+#: model:ir.model.fields,field_description:itq_vehicle_visit_request.field_vehicle_visit_request_id
+#: model:ir.model.fields,field_description:itq_vehicle_visit_request.field_vehicle_visit_request_line_id
+msgid "ID"
+msgstr "المعرف"
+
+#. module: itq_vehicle_visit_request
+#: selection:vehicle.visit.request,vehicle_move_type:0
+msgid "In"
+msgstr "دخول"
+
+#. module: itq_vehicle_visit_request
+#: model:ir.model.fields,field_description:itq_vehicle_visit_request.field_vehicle_visit_request___last_update
+#: model:ir.model.fields,field_description:itq_vehicle_visit_request.field_vehicle_visit_request_line___last_update
+msgid "Last Modified on"
+msgstr "آخر تعديل في"
+
+#. module: itq_vehicle_visit_request
+#: model:ir.model.fields,field_description:itq_vehicle_visit_request.field_vehicle_visit_request_line_write_uid
+#: model:ir.model.fields,field_description:itq_vehicle_visit_request.field_vehicle_visit_request_write_uid
+msgid "Last Updated by"
+msgstr "آخر تحديث بواسطة"
+
+#. module: itq_vehicle_visit_request
+#: model:ir.model.fields,field_description:itq_vehicle_visit_request.field_vehicle_visit_request_line_write_date
+#: model:ir.model.fields,field_description:itq_vehicle_visit_request.field_vehicle_visit_request_write_date
+msgid "Last Updated on"
+msgstr "آخر تحديث في"
+
+#. module: itq_vehicle_visit_request
+#: code:addons/itq_vehicle_visit_request/models/vehicle_visit_request.py:22
+#: code:addons/itq_vehicle_visit_request/models/vehicle_visit_request.py:23
+#, python-format
+msgid "New"
+msgstr "جديد"
+
+#. module: itq_vehicle_visit_request
+#: model:ir.ui.menu,name:itq_vehicle_visit_request.vehicle_visit_request_menu
+msgid "New Vehicle Request"
+msgstr "طلب جديد لزيارة مركبات"
+
+#. module: itq_vehicle_visit_request
+#: model:ir.actions.act_window,name:itq_vehicle_visit_request.new_vehicle_visit_request_action
+msgid "New Vehicle Visit Request"
+msgstr "طلب جديد لزيارة مركبات "
+
+#. module: itq_vehicle_visit_request
+#: code:addons/itq_vehicle_visit_request/models/vehicle_visit_request.py:127
+#: code:addons/itq_vehicle_visit_request/models/vehicle_visit_request.py:159
+#, python-format
+msgid "New Vehicle Visit Requests"
+msgstr "طلبات جديدة لزيارة المركبات"
+
+#. module: itq_vehicle_visit_request
+#: selection:vehicle.visit.request,vehicle_move_type:0
+msgid "Out"
+msgstr "خروج"
+
+#. module: itq_vehicle_visit_request
+#: model:ir.model.fields,field_description:itq_vehicle_visit_request.field_vehicle_visit_request_out_reason
+msgid "Out Reason"
+msgstr "سبب الخروج"
+
+#. module: itq_vehicle_visit_request
+#: model:ir.model.fields,field_description:itq_vehicle_visit_request.field_vehicle_visit_request_permission_ids
+#: model:ir.ui.view,arch_db:itq_vehicle_visit_request.vehicle_visit_request_form_view
+msgid "Permission"
+msgstr "التصاريح"
+
+#. module: itq_vehicle_visit_request
+#: model:ir.ui.menu,name:itq_vehicle_visit_request.vehicle_visit_requester_menu
+msgid "Requester"
+msgstr "الطالب"
+
+#. module: itq_vehicle_visit_request
+#: code:addons/itq_vehicle_visit_request/models/vehicle_visit_request.py:143
+#, python-format
+msgid "Review Rejected Vehicle Visit Requests"
+msgstr "طلبات زيارة مركبات رفضها المراجع"
+
+#. module: itq_vehicle_visit_request
+#: model:ir.ui.menu,name:itq_vehicle_visit_request.vehicle_visit_reviewer_menu
+msgid "Reviewer"
+msgstr "المراجع"
+
+#. module: itq_vehicle_visit_request
+#: model:ir.ui.menu,name:itq_vehicle_visit_request.vehicle_visit_request_review_reject_menu
+msgid "Reviewer Rejected Requests"
+msgstr "طلبات طويلة المدة رفضها المراجع"
+
+#. module: itq_vehicle_visit_request
+#: model:ir.actions.act_window,name:itq_vehicle_visit_request.reviewer_rejected_vehicle_visit_request_action
+msgid "Reviewer Rejected Vehicle Visit Request"
+msgstr "طلب زيارة مركبات رفضه المراجع"
+
+#. module: itq_vehicle_visit_request
+#: model:ir.actions.act_window,help:itq_vehicle_visit_request.canceled_vehicle_visit_request_action
+#: model:ir.actions.act_window,help:itq_vehicle_visit_request.under_review_vehicle_visit_request_action
+msgid "There is no Draft Request to be shown,\n"
+"                Click to create a new long term visit request ."
+msgstr "ليس هناك طلبات جديدة الآن,\n"
+"."
+
+#. module: itq_vehicle_visit_request
+#: model:ir.ui.menu,name:itq_vehicle_visit_request.vehicle_visit_request_under_approve_menu
+msgid "Under Approve Vehicle Request"
+msgstr "طلب زيارة مركبات قيد الاعتماد"
+
+#. module: itq_vehicle_visit_request
+#: model:ir.actions.act_window,name:itq_vehicle_visit_request.under_approve_vehicle_visit_request_action
+msgid "Under Approve Vehicle Visit Request"
+msgstr "طلب زيارة مركبات قيد الاعتماد"
+
+#. module: itq_vehicle_visit_request
+#: model:ir.ui.menu,name:itq_vehicle_visit_request.vehicle_visit_request_under_review_menu
+msgid "Under Review Vehicle Request"
+msgstr "طلب زيارة مركبات قيد المراجعة"
+
+#. module: itq_vehicle_visit_request
+#: model:ir.actions.act_window,name:itq_vehicle_visit_request.under_review_vehicle_visit_request_action
+msgid "Under Review Vehicle Visit Request"
+msgstr "طلب زيارة مركبات قيد المراجعة"
+
+#. module: itq_vehicle_visit_request
+#: code:addons/itq_vehicle_visit_request/models/vehicle_visit_request.py:67
+#, python-format
+msgid "Under Review Vehicle Visit Requests"
+msgstr "طلب زيارة مركبات قيد المراجعة"
+
+#. module: itq_vehicle_visit_request
+#: model:ir.ui.view,arch_db:itq_vehicle_visit_request.vehicle_visit_request_form_view
+#: model:ir.ui.view,arch_db:itq_vehicle_visit_request.visit_request_long_line_form_view
+msgid "Vehicle Color"
+msgstr "لون المركبة"
+
+#. module: itq_vehicle_visit_request
+#: model:ir.model.fields,field_description:itq_vehicle_visit_request.field_vehicle_visit_request_vehicle_content
+msgid "Vehicle Content"
+msgstr "حمولة المركبات"
+
+#. module: itq_vehicle_visit_request
+#: model:ir.model.fields,help:itq_vehicle_visit_request.field_vehicle_visit_request_vehicle_content
+msgid "Vehicle Content Description when the move type is (in)"
+msgstr "يتم توصيف الحمولة عندما يكون نوع الحركة (داخل)"
+
+#. module: itq_vehicle_visit_request
+#: model:ir.ui.view,arch_db:itq_vehicle_visit_request.visit_request_long_line_form_view
+msgid "Vehicle Information"
+msgstr "معلومات المركبة"
+
+#. module: itq_vehicle_visit_request
+#: model:ir.ui.view,arch_db:itq_vehicle_visit_request.vehicle_visit_request_form_view
+#: model:ir.ui.view,arch_db:itq_vehicle_visit_request.visit_request_long_line_form_view
+msgid "Vehicle Model"
+msgstr "موديل المركبة"
+
+#. module: itq_vehicle_visit_request
+#: model:ir.model.fields,field_description:itq_vehicle_visit_request.field_vehicle_visit_request_vehicle_move_type
+msgid "Vehicle Move Type"
+msgstr "نوع الحركة"
+
+#. module: itq_vehicle_visit_request
+#: model:ir.ui.view,arch_db:itq_vehicle_visit_request.vehicle_visit_request_form_view
+msgid "Vehicle Number"
+msgstr "رقم المركبة"
+
+#. module: itq_vehicle_visit_request
+#: model:ir.actions.act_window,name:itq_vehicle_visit_request.action_visit_vehicle_permission
+#: model:ir.ui.menu,name:itq_vehicle_visit_request.vehicle_visit_permission_menu
+msgid "Vehicle Permissions"
+msgstr "تصاريح المركبات"
+
+#. module: itq_vehicle_visit_request
+#: model:ir.ui.menu,name:itq_vehicle_visit_request.vehicle_visit_permission_gate_main_menu
+msgid "Vehicle Permissions & Gate"
+msgstr "تصاريح المركبات & البوابة"
+
+#. module: itq_vehicle_visit_request
+#: model:ir.model.fields,field_description:itq_vehicle_visit_request.field_vehicle_visit_request_vehicle_request_line_ids
+msgid "Vehicle Request Lines"
+msgstr "تفاصيل طلب زيارة المركبات"
+
+#. module: itq_vehicle_visit_request
+#: model:ir.ui.view,arch_db:itq_vehicle_visit_request.visit_request_long_line_form_view
+msgid "Vehicle Sign"
+msgstr "رقم اللوحة"
+
+#. module: itq_vehicle_visit_request
+#: model:ir.ui.view,arch_db:itq_vehicle_visit_request.vehicle_visit_request_form_view
+#: model:ir.ui.view,arch_db:itq_vehicle_visit_request.visit_request_long_line_form_view
+msgid "Vehicle Type"
+msgstr "نوع المركبة"
+
+#. module: itq_vehicle_visit_request
+#: model:ir.model,name:itq_vehicle_visit_request.model_vehicle_visit_request
+#: model:ir.model.fields,field_description:itq_vehicle_visit_request.field_vehicle_visit_request_line_vehicle_visit_request_id
+#: model:ir.ui.menu,name:itq_vehicle_visit_request.vehicle_visit_request_main_menu
+msgid "Vehicle Visit Request"
+msgstr "طلب زيارة مركبات"
+
+#. module: itq_vehicle_visit_request
+#: model:ir.model,name:itq_vehicle_visit_request.model_vehicle_visit_request_line
+#: model:ir.model.fields,field_description:itq_vehicle_visit_request.field_daily_visit_additional_items_vehicle_visit_request_line_id
+#: model:ir.model.fields,field_description:itq_vehicle_visit_request.field_long_visit_additional_items_vehicle_visit_request_line_id
+#: model:ir.model.fields,field_description:itq_vehicle_visit_request.field_visit_additional_items_vehicle_visit_request_line_id
+msgid "Vehicle Visit Request Line"
+msgstr "تفاصيل طلب زيارة المركبات"
+
+#. module: itq_vehicle_visit_request
+#: model:ir.model,name:itq_vehicle_visit_request.model_visit_additional_items
+msgid "Visit Additional Items"
+msgstr "مقتنيات الزيارة"
+
+#. module: itq_vehicle_visit_request
+#: model:ir.model,name:itq_vehicle_visit_request.model_visit_permission
+msgid "Visit Permission"
+msgstr "تصريح الزيارة"
+
+#. module: itq_vehicle_visit_request
+#: model:ir.ui.view,arch_db:itq_vehicle_visit_request.vehicle_visit_request_form_view
+msgid "Visit Request Lines"
+msgstr "تفاصيل طلب الزيارة"
+
+#. module: itq_vehicle_visit_request
+#: model:ir.ui.view,arch_db:itq_vehicle_visit_request.vehicle_visit_request_form_view
+msgid "driver name"
+msgstr "اسم السائق"
+

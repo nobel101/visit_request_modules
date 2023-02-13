@@ -13,8 +13,8 @@
                     <button class="btn btn-primary" name="action_confirm" type="object" states="draft"
                             string="Send to Review"/>
                     <button class="btn btn-primary" name="action_cancel" type="object"
-                            states="under_review,under_approve,returned" string="Cancel" special="cancel"/>
-                    <button class="btn btn-primary" name="action_send_request" type="object" states="under_review"
+                            states="under_review,under_approve,returned" string="Cancel"/>
+                    <button class="btn btn-primary" name="action_send_request" type="object" states="under_review,approver_rejected"
                             string="Send To Approve"/>
                     <button class="btn btn-primary" name="action_return_request" type="object"
                             states="under_review,under_approve" string="Return"/>
@@ -39,22 +39,24 @@
                             <field name="request_number"/>
                         </h1>
                     </div>
-                    <group>
+                    <group name="main_req_group">
                         <group name="req_info" string="Request Information">
                             <field name="user_id"
-                                   attrs="{'invisible':[('visibility_flag','=',False)],'required':[('visibility_flag','=',True)],'readonly':[('state', 'not in', ['draft','returned'])]}"/>
+                                   attrs="{'invisible':[('visibility_flag','=',False)],'required':[('visibility_flag','=',True)],
+                                   'readonly':[('state', 'not in', ['draft','returned','approver_rejected','review_rejected'])]}"/>
                             <field name="date_request"
-                                   attrs="{'invisible':[('visibility_flag','=',False)],'required':[('visibility_flag','=',True)],'readonly':[('state', 'not in', ['draft','returned'])]}"/>
+                                   attrs="{'invisible':[('visibility_flag','=',False)],'required':[('visibility_flag','=',True)],
+                                   'readonly':[('state', 'not in', ['draft','returned','approver_rejected','review_rejected'])]}"/>
                             <field name="date_start" string="Request Start Date"
-                                   attrs="{'readonly': [('state', 'not in', ['draft','returned'],[('state', 'not in', ['draft','returned'])])]}"/>
+                                   attrs="{'readonly': [('state', 'not in', ['draft','returned','review_rejected','approver_rejected'])]}"/>
                             <field name="date_end" string="Request End Date"
-                                   attrs="{'readonly': [('state', 'not in', ['draft','returned'])]}"/>
+                                   attrs="{'readonly': [('state', 'not in', ['draft','returned','approver_rejected','review_rejected'])]}"/>
                             <field name="visit_duration"
-                                   attrs="{'readonly': [('state', 'not in', ['draft','returned'])]}"/>
+                                   attrs="{'readonly': [('state', 'not in', ['draft','returned','approver_rejected','review_rejected'])]}"/>
                         </group>
                         <group name="approval_information">
                             <field name="hr_department_id"
-                                   attrs="{'readonly': [('state', 'not in', ['draft','returned'])]}"/>
+                                   attrs="{'readonly': [('state', 'not in', ['draft','returned','review_rejected','approver_rejected'])]}"/>
                             <field name="approver_rejection_reason"
                                    attrs="{'invisible':['|',('state','in',['approved','draft','cancel','returned']),('approver_rejection_reason','=',False)]}"/>
                             <field name="reviewer_rejection_reason"
@@ -65,11 +67,11 @@
                         <page name="request_reason_page" string="Request Reason">
                             <label for="request_reason"/>
                             <field name="request_reason"
-                                   attrs="{'readonly': [('state', 'not in', ['draft','returned'])]}"/>
+                                   attrs="{'readonly': [('state', 'not in', ['draft','returned','review_rejected','approver_rejected'])]}"/>
                         </page>
                         <page name="request_attachments" string="Attachments">
                             <field name="attachment_ids" widget="many2many_binary"
-                                   attrs="{'readonly': [('state', 'not in', ['draft','returned'])]}"/>
+                                   attrs="{'readonly': [('state', 'not in', ['draft','returned','review_rejected','approver_rejected'])]}"/>
                         </page>
                     </notebook>
                 </sheet>
@@ -90,9 +92,11 @@
                 <field name="hr_department_id"/>
                 <field name="date_request"/>
                 <field name="state"/>
+                <field name="type"/>
             </tree>
         </field>
     </record>
+    <menuitem id="main_visit_request_long" name="Visit Requests"/>
 </odoo>
 
 

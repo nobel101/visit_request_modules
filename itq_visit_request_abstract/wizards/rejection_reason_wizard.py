@@ -5,8 +5,8 @@ class RejectionReason(models.TransientModel):
     _name = 'rejection.reason.wizard'
     _description = 'Rejection Reason'
 
-    reviewer_rejection_reason = fields.Text(string='Reviewer Rejection Reason', required=True)
-    approver_rejection_reason = fields.Text(string='Approver Rejection Reason', required=True)
+    reviewer_rejection_reason = fields.Text(string='Reviewer Rejection Reason')
+    approver_rejection_reason = fields.Text(string='Approver Rejection Reason')
 
     def action_review_reject(self):
         active_id = self.env.context.get('active_id')

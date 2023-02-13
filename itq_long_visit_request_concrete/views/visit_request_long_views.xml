@@ -1,0 +1,184 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<odoo>
+    <record id="visit_request_long_form_view" model="ir.ui.view">
+        <field name="name">long.visit.request.form.view</field>
+        <field name="model">long.visit.request</field>
+        <field name="mode">primary</field>
+        <field name="inherit_id" ref="itq_visit_request_abstract.visit_request_abstract_form_view"/>
+        <field name="arch" type="xml">
+            <xpath expr="//button[@name='generate_permission']" position="attributes">
+                <attribute name="attrs">{'invisible':['|',('permission_count','>=',1)]}</attribute>
+            </xpath>
+            <xpath expr="//div[@name='button_box']" position="inside">
+                <button name="action_permission_view" class="oe_stat_button" type="object"
+                        icon="fa-check-square-o" attrs="{'invisible': [('state', '=','approve')]}">
+                    <field name="permission_count" widget="statinfo" string="Permission"/>
+                </button>
+            </xpath>
+            <xpath expr="//notebook/page[1]" position="before">
+                <page name="visitor_lines" string="Visit Request Lines">
+                    <field name="visit_request_long_line_ids"
+                           attrs="{'readonly': [('state', 'not in', ['draft','returned','review_rejected','approver_rejected'])]}">
+                        <tree>
+                            <field name="sequence" widget="handle" readonly="True"/>
+                            <field name="visitor_name"/>
+                            <field name="visitor_id_number"/>
+                            <field name="country_id"/>
+                            <field name="visitor_phone"/>
+                            <field name="visit_additional_item_ids" widget="many2many_tags"/>
+                            <field name="need_car_authorization"/>
+                            <field name="car_type"
+                                   attrs="{'required':[('need_car_authorization','=',True)],'readonly':[('need_car_authorization','=',False)]}"/>
+                            <field name="car_model"
+                                   attrs="{'required':[('need_car_authorization','=',True)],'readonly':[('need_car_authorization','=',False)]}"/>
+                            <field name="car_color"
+                                   attrs="{'required':[('need_car_authorization','=',True)],'readonly':[('need_car_authorization','=',False)]}"/>
+                            <field name="car_sign"
+                                   attrs="{'required':[('need_car_authorization','=',True)],'readonly':[('need_car_authorization','=',False)]}"/>
+                            <field name="state"/>
+                            <field name="is_legitimate" readonly="True"/>
+                            <button name="action_line_reject" type="object" string="Reject"
+                                    attrs="{'invisible': ['|',('parent.state', '!=','under_approve'),('state','!=','under_review')]}"/>
+                        </tree>
+                    </field>
+                </page>
+            </xpath>
+        </field>
+    </record>
+    <record id="visit_request_long_tree_view" model="ir.ui.view">
+        <field name="name">long.visit.request.tree.view</field>
+        <field name="model">long.visit.request</field>
+        <field name="mode">primary</field>
+        <field name="inherit_id" ref="itq_visit_request_abstract.visit_request_abstract_tree_view"/>
+        <field name="arch" type="xml">
+            <xpath expr="//tree" position="inside">
+                <field name="visit_request_long_line_ids" widget="many2many_tags"/>
+            </xpath>
+        </field>
+    </record>
+    <record id="visit_request_long_window_action" model="ir.actions.act_window">
+        <field name="name">New Long Visit Request</field>
+        <field name="res_model">long.visit.request</field>
+        <field name="view_mode">tree,form</field>
+        <field name="view_id" ref="visit_request_long_tree_view"/>
+        <field name="context">{}</field>
+        <field name="domain">[('state', '=', 'draft')]</field>
+        <field name="help" type="html">
+            <p class="o_no_content">
+                There is no Draft Request to be shown,
+                Click to create a new long term visit request .
+            </p>
+        </field>
+    </record>
+    <record id="visit_request_long_under_approve_window_action" model="ir.actions.act_window">
+        <field name="name">Under Approve Long Visit Request</field>
+        <field name="res_model">long.visit.request</field>
+        <field name="view_mode">tree,form</field>
+        <field name="view_id" ref="visit_request_long_tree_view"/>
+        <field name="context">{'create': False}</field>
+        <field name="domain">[('state', '=', 'under_approve')]</field>
+        <field name="help" type="html">
+            <p class="o_no_content">
+                There is no Draft Request to be shown,
+                Click to create a new long term visit request .
+            </p>
+        </field>
+    </record>
+    <record id="visit_request_long_reviewer_rejected_window_action" model="ir.actions.act_window">
+        <field name="name">Reviewer Rejected Requests</field>
+        <field name="res_model">long.visit.request</field>
+        <field name="view_mode">tree,form</field>
+        <field name="view_id" ref="visit_request_long_tree_view"/>
+        <field name="context">{'create': False}</field>
+        <field name="domain">[('state', '=', 'review_rejected')]</field>
+        <field name="help" type="html">
+            <p class="o_no_content">
+                There is no Draft Request to be shown,
+                Click to create a new long term visit request .
+            </p>
+        </field>
+    </record>
+    <record id="visit_request_long_approver_rejected_window_action" model="ir.actions.act_window">
+        <field name="name">Approver Rejected Requests</field>
+        <field name="res_model">long.visit.request</field>
+        <field name="view_mode">tree,form</field>
+        <field name="view_id" ref="visit_request_long_tree_view"/>
+        <field name="context">{'create': False}</field>
+        <field name="domain">[('state', '=', 'approver_rejected')]</field>
+        <field name="help" type="html">
+            <p class="o_no_content">
+                There is no Draft Request to be shown,
+                Click to create a new long term visit request .
+            </p>
+        </field>
+    </record>
+    <record id="visit_request_long_canceled_window_action" model="ir.actions.act_window">
+        <field name="name">Canceled Long Visit Request</field>
+        <field name="res_model">long.visit.request</field>
+        <field name="view_mode">tree,form</field>
+        <field name="context">{'create': False}</field>
+        <field name="domain">[('state', '=', 'cancel')]</field>
+        <field name="help" type="html">
+            <p class="o_no_content">
+                There is no Draft Request to be shown,
+                Click to create a new long term visit request .
+            </p>
+        </field>
+    </record>
+    <record id="visit_request_long_under_review_window_action" model="ir.actions.act_window">
+        <field name="name">Under Review Long Visit Request</field>
+        <field name="res_model">long.visit.request</field>
+        <field name="view_mode">tree,form</field>
+        <field name="view_id" ref="visit_request_long_tree_view"/>
+        <field name="context">{'create': False}</field>
+        <field name="domain">[('state', '=', 'under_review')]</field>
+        <field name="help" type="html">
+            <p class="o_no_content">
+                There is no Draft Request to be shown,
+                Click to create a new long term visit request .
+            </p>
+        </field>
+    </record>
+    <record id="visit_request_long_approved_window_action" model="ir.actions.act_window">
+        <field name="name">Approved Request</field>
+        <field name="res_model">long.visit.request</field>
+        <field name="view_mode">tree,form</field>
+        <field name="view_id" ref="visit_request_long_tree_view"/>
+        <field name="context">{'create': False}</field>
+        <field name="domain">[('state', '=', 'approved')]</field>
+        <field name="help" type="html">
+            <p class="o_no_content">
+                There is no Draft Request to be shown,
+                Click to create a new long term visit request .
+            </p>
+        </field>
+    </record>
+
+    <menuitem id="arrow_long_visit_menuitem" name="Long Visits" parent="itq_visit_request_abstract.main_visit_request_long"
+              sequence="1"/>
+    <menuitem id="sub_menu_visit_request_long_requester" name="Requester"
+              parent="arrow_long_visit_menuitem"
+              sequence="1"/>
+    <menuitem id="sub_menu_visit_request_long_reviewer" name="Reviewer"
+              parent="arrow_long_visit_menuitem"
+              sequence="2"/>
+    <menuitem id="sub_menu_visit_request_long_approver" name="Approver"
+              parent="arrow_long_visit_menuitem"
+              sequence="3"/>
+    <menuitem id="visit_request_long" parent="sub_menu_visit_request_long_requester"
+              action="visit_request_long_window_action" name="New Requests"/>
+    <menuitem id="visit_request_long_under_review" parent="sub_menu_visit_request_long_reviewer"
+              action="visit_request_long_under_review_window_action" name="Under Review"/>
+    <menuitem id="visit_request_under_approve_review_menu" parent="sub_menu_visit_request_long_approver"
+              action="visit_request_long_under_approve_window_action" name="Under approve Requests"/>
+    <menuitem id="visit_request_rejected_review_menu" parent="sub_menu_visit_request_long_requester"
+              action="visit_request_long_reviewer_rejected_window_action" name="Reviewer Rejected Requests"/>
+    <menuitem id="visit_request_rejected_approve_menu" parent="sub_menu_visit_request_long_reviewer"
+              action="visit_request_long_approver_rejected_window_action" name="Approver Rejected Requests"/>
+    <menuitem id="visit_request_canceled_review_menu" parent="sub_menu_visit_request_long_requester"
+              action="visit_request_long_canceled_window_action" name="Canceled Requests"/>
+    <menuitem id="visit_request_approved_review_menu" parent="sub_menu_visit_request_long_requester"
+              action="visit_request_long_approved_window_action" name="Approved Requests"/>
+    <menuitem id="visit_request_approved_review_menu_ready_for_permission" parent="sub_menu_visit_request_long_approver"
+          action="visit_request_long_approved_window_action" name="Approved Requests"/>
+</odoo>

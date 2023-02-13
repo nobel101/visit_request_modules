@@ -1,0 +1,133 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<odoo>
+    <record model="ir.ui.view" id="daily_visit_request_form_view">
+        <field name="name">daily.visit.request.form.view</field>
+        <field name="model">daily.visit.request</field>
+        <field name="mode">primary</field>
+        <field name="inherit_id" ref="itq_visit_request_abstract.visit_request_abstract_form_view"/>
+        <field name="arch" type="xml">
+            <xpath expr="//button[@name='action_confirm']" position="attributes">
+                <attribute name="invisible">1</attribute>
+            </xpath>
+            <xpath expr="//button[@name='action_send_request']" position="attributes">
+                <attribute name="states">draft,approver_rejected</attribute>
+            </xpath>
+            <xpath expr="//button[@name='generate_permission']" position="attributes">
+                <attribute name="attrs">{'invisible': ['|', ('permission_count', '>=', 1)]}</attribute>
+            </xpath>
+            <xpath expr="//div[@name='button_box']" position="inside">
+                <button name="action_permission_view" class="oe_stat_button" type="object"
+                        icon="fa-check-square-o" attrs="{'invisible': [('state', '=','approve')]}">
+                    <field name="permission_count" widget="statinfo" string="Permission"/>
+                </button>
+            </xpath>
+            <xpath expr="//notebook/page[1]" position="before">
+                <page name="visitor_lines" string="Visit Request Lines">
+                    <field name="daily_request_line_ids"
+                           attrs="{'readonly': [('state', 'not in', ['draft','returned','review_rejected','approver_rejected'])]}">
+                        <tree>
+                            <field name="sequence" widget="handle" readonly="True" />
+                            <field name="visitor_name"/>
+                            <field name="visitor_id_number"/>
+                            <field name="country_id"/>
+                            <field name="visitor_phone"/>
+                            <field name="visit_additional_item_ids" widget="many2many_tags"/>
+                            <field name="need_car_authorization"/>
+                            <field name="car_type"
+                                   attrs="{'required':[('need_car_authorization','=',True)],'readonly':[('need_car_authorization','=',False)]}"/>
+                            <field name="car_model"
+                                   attrs="{'required':[('need_car_authorization','=',True)],'readonly':[('need_car_authorization','=',False)]}"/>
+                            <field name="car_color"
+                                   attrs="{'required':[('need_car_authorization','=',True)],'readonly':[('need_car_authorization','=',False)]}"/>
+                            <field name="car_sign"
+                                   attrs="{'required':[('need_car_authorization','=',True)],'readonly':[('need_car_authorization','=',False)]}"/>
+                            <field name="state"/>
+                            <field name="is_legitimate" readonly="True"/>
+                            <button name="action_line_reject" type="object" string="Reject"
+                                    attrs="{'invisible': ['|',('parent.state', '!=','under_approve'),('state','!=','under_review')]}"/>
+                        </tree>
+                    </field>
+                </page>
+            </xpath>
+        </field>
+    </record>
+    <record model="ir.actions.act_window" id="daily_visit_request_action">
+        <field name="name">Daily Visit Request</field>
+        <field name="res_model">daily.visit.request</field>
+        <field name="view_mode">tree,form</field>
+        <field name="context">{}</field>
+        <field name="domain">[('state', '=', 'draft'),('type','=','daily')]</field>
+        <field name="view_id" ref="itq_visit_request_abstract.visit_request_abstract_tree_view"/>
+    </record>
+    <record model="ir.actions.act_window" id="action_daily_visit_request_rejected">
+        <field name="name">Rejected Daily Visit Request</field>
+        <field name="res_model">daily.visit.request</field>
+        <field name="view_mode">tree,form</field>
+        <field name="context">{'create': False}</field>
+        <field name="domain">[('state', '=', 'approver_rejected'),('type','=','daily')]</field>
+        <field name="view_id" ref="itq_visit_request_abstract.visit_request_abstract_tree_view"/>
+    </record>
+    <record model="ir.actions.act_window" id="action_daily_visit_request_cancelled">
+        <field name="name">Cancelled Daily Visit Request</field>
+        <field name="res_model">daily.visit.request</field>
+        <field name="view_mode">tree,form</field>
+        <field name="context">{'create': False}</field>
+        <field name="domain">[('state', '=', 'cancel'),('type','=','daily')]</field>
+        <field name="view_id" ref="itq_visit_request_abstract.visit_request_abstract_tree_view"/>
+    </record>
+    <record model="ir.actions.act_window" id="action_daily_visit_request_under_approve">
+        <field name="name">Under Approve Daily Visit Request</field>
+        <field name="res_model">daily.visit.request</field>
+        <field name="view_mode">tree,form</field>
+        <field name="context">{'create': False}</field>
+        <field name="domain">[('state', '=', 'under_approve'),('type','=','daily')]</field>
+        <field name="view_id" ref="itq_visit_request_abstract.visit_request_abstract_tree_view"/>
+    </record>
+    <record model="ir.actions.act_window" id="action_daily_visit_request_approved">
+        <field name="name">Approved Daily Visit Request</field>
+        <field name="res_model">daily.visit.request</field>
+        <field name="view_mode">tree,form</field>
+        <field name="context">{'create': False}</field>
+        <field name="domain">[('state', '=', 'approved'),('type','=','daily')]</field>
+        <field name="view_id" ref="itq_visit_request_abstract.visit_request_abstract_tree_view"/>
+    </record>
+    <record model="ir.actions.act_window" id="action_visit_daily_permission">
+        <field name="name">Daily Permissions</field>
+        <field name="res_model">visit.permission</field>
+        <field name="context">{'create': False}</field>
+        <field name="view_id" ref="itq_visit_request_abstract.daily_visit_permission_tree"/>
+        <field name="domain">[('type','=','daily')]</field>
+    </record>
+    <menuitem id="arrow_daily_visit_menuitem" name="Daily Visits"
+              parent="itq_visit_request_abstract.main_visit_request_long"
+              sequence="1"/>
+    <menuitem id="daily_visit_request_requester_menuitem" name="Requester" parent="arrow_daily_visit_menuitem"
+              sequence="1"/>
+    <menuitem id="daily_visit_request_approver_menuitem" name="Approver" parent="arrow_daily_visit_menuitem"
+              sequence="1"/>
+    <menuitem id="permission_main_menuitem" name="Permissions" parent="arrow_daily_visit_menuitem"
+              sequence="1"/>
+    <menuitem id="new_daily_visit_request_menuitem" name="New Request" parent="daily_visit_request_requester_menuitem"
+              action="daily_visit_request_action"
+              sequence="2"/>
+    <menuitem id="rejected_daily_visit_request_menuitem" name="Rejected Requests"
+              parent="daily_visit_request_requester_menuitem"
+              action="action_daily_visit_request_rejected"
+              sequence="3"/>
+    <menuitem id="cancelled_daily_visit_request_menuitem" name="Canceled Requests"
+              parent="daily_visit_request_requester_menuitem"
+              action="action_daily_visit_request_cancelled"
+              sequence="3"/>
+    <menuitem id="under_approve_daily_visit_request_menuitem" name="Under Approve"
+              parent="daily_visit_request_approver_menuitem"
+              action="action_daily_visit_request_under_approve"
+              sequence="1"/>
+    <menuitem id="approved_daily_visit_Request_menuitem" name="Approved"
+              parent="permission_main_menuitem"
+              action="action_daily_visit_request_approved"
+              sequence="2"/>
+    <menuitem id="daily_visit_permission_menuitem" name="Daily Permissions"
+              parent="permission_main_menuitem"
+              action="action_visit_daily_permission"
+              sequence="3"/>
+</odoo>

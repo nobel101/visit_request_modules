@@ -34,8 +34,13 @@ class VisitRequestAbstract(models.Model):
     company_id = fields.Many2one('res.company', string='Company', default=lambda self: self.env.user.company_id)
     reviewer_rejection_reason = fields.Text(string='Reviewer Rejection Reason', readonly=True)
     approver_rejection_reason = fields.Text(string='Approver Rejection Reason', readonly=True)
-
+    type = fields.Selection([('daily', 'Daily'), ('long', 'Long'), ('trainee', 'Trainee'),('vehicle','Vehicle')], string='Visit Type', readonly=True)
+    permission_count = fields.Integer(compute='_compute_permission_count', string='Permission Count')
     # the request to be returned in concrete class (long or trainee)
+
+    def _compute_permission_count(self):
+        pass
+
     def action_confirm(self):
         pass
 
@@ -66,6 +71,9 @@ class VisitRequestAbstract(models.Model):
         pass
 
     def generate_permission(self):
+        pass
+
+    def action_permission_view(self):
         pass
 
     @api.constrains('date_start', 'date_end')

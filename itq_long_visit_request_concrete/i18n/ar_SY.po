@@ -1,0 +1,522 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+#	* itq_long_visit_request_concrete
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 11.0\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2023-02-05 12:32+0000\n"
+"PO-Revision-Date: 2023-02-05 12:32+0000\n"
+"Last-Translator: <>\n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: \n"
+"Plural-Forms: \n"
+
+#. module: itq_long_visit_request_concrete
+#: model:ir.ui.view,arch_db:itq_long_visit_request_concrete.long_visit_permission_report
+msgid "<span style=\"White-space: nowrap;\">الصفحة:</span>\n"
+"                                                    <span class=\"page\"/>/\n"
+"                                                    <span class=\"topage\"/>"
+msgstr "<span style=\"White-space: nowrap;\">الصفحة:</span>\n"
+"                                                    <span class=\"page\"/>/\n"
+"                                                    <span class=\"topage\"/>"
+
+#. module: itq_long_visit_request_concrete
+#: model:ir.ui.view,arch_db:itq_long_visit_request_concrete.long_visit_permission_report
+msgid "<span style=\"White-space: nowrap;\">المستخدم :</span>"
+msgstr "<span style=\"White-space: nowrap;\">المستخدم :</span>"
+
+#. module: itq_long_visit_request_concrete
+#: model:ir.ui.view,arch_db:itq_long_visit_request_concrete.long_visit_permission_report
+msgid "<span>تقرير التكميلي اليومي</span>"
+msgstr "<span>تقرير التكميلي اليومي</span>"
+
+#. module: itq_long_visit_request_concrete
+#: model:ir.ui.view,arch_db:itq_long_visit_request_concrete.long_visit_permission_report
+msgid "<span>رقم الجوال</span>"
+msgstr "<span>رقم الجوال</span>"
+
+#. module: itq_long_visit_request_concrete
+#: model:ir.ui.view,arch_db:itq_long_visit_request_concrete.long_visit_permission_report
+msgid "<strong>\n"
+"                                                <span>المملكة العربية السعودية</span>\n"
+"                                            </strong>"
+msgstr "<strong>\n"
+"                                                <span>المملكة العربية السعودية</span>\n"
+"                                            </strong>"
+
+#. module: itq_long_visit_request_concrete
+#: model:ir.ui.view,arch_db:itq_long_visit_request_concrete.long_visit_permission_report
+msgid "<strong>Note: </strong>"
+msgstr "<strong>ملاحظة: </strong>"
+
+#. module: itq_long_visit_request_concrete
+#: model:ir.ui.view,arch_db:itq_long_visit_request_concrete.visit_request_long_line_form_view
+msgid "Additional Items"
+msgstr "مقتنيات الزائر"
+
+#. module: itq_long_visit_request_concrete
+#: code:addons/itq_long_visit_request_concrete/models/visit_request_long.py:162
+#, python-format
+msgid "Approved Long Visit Requests"
+msgstr "طلبات التصريح طويلة المدة (معتدة)"
+
+#. module: itq_long_visit_request_concrete
+#: model:ir.actions.act_window,name:itq_long_visit_request_concrete.visit_request_long_approved_window_action
+msgid "Approved Request"
+msgstr "طلبات معتمدة"
+
+#. module: itq_long_visit_request_concrete
+#: model:ir.ui.menu,name:itq_long_visit_request_concrete.visit_request_approved_review_menu
+#: model:ir.ui.menu,name:itq_long_visit_request_concrete.visit_request_approved_review_menu_ready_for_permission
+msgid "Approved Requests"
+msgstr "طلبات مُعْتمدة"
+
+#. module: itq_long_visit_request_concrete
+#: model:ir.ui.menu,name:itq_long_visit_request_concrete.sub_menu_visit_request_long_approver
+msgid "Approver"
+msgstr "المُعْتمد"
+
+#. module: itq_long_visit_request_concrete
+#: code:addons/itq_long_visit_request_concrete/models/visit_request_long.py:196
+#, python-format
+msgid "Approver Rejected Long Visit Requests"
+msgstr "طلبات طويلة المدة رفضهاالمُعْتمِد"
+
+#. module: itq_long_visit_request_concrete
+#: model:ir.actions.act_window,name:itq_long_visit_request_concrete.visit_request_long_approver_rejected_window_action
+#: model:ir.ui.menu,name:itq_long_visit_request_concrete.visit_request_rejected_approve_menu
+msgid "Approver Rejected Requests"
+msgstr "طلبات طويلة المدة رفضهاالمُعْتمِد"
+
+#. module: itq_long_visit_request_concrete
+#: model:ir.model.fields,field_description:itq_long_visit_request_concrete.field_visit_permission_user_id
+msgid "Authorized User"
+msgstr "صاحب الصلاحية"
+
+#. module: itq_long_visit_request_concrete
+#: selection:visit.permission,visit_duration:0
+msgid "Both"
+msgstr "معا"
+
+#. module: itq_long_visit_request_concrete
+#: model:ir.actions.act_window,name:itq_long_visit_request_concrete.visit_request_long_canceled_window_action
+msgid "Canceled Long Visit Request"
+msgstr "طلب طويل المدة ملغى"
+
+#. module: itq_long_visit_request_concrete
+#: code:addons/itq_long_visit_request_concrete/models/visit_request_long.py:37
+#: code:addons/itq_long_visit_request_concrete/models/visit_request_long.py:70
+#: code:addons/itq_long_visit_request_concrete/models/visit_request_long.py:82
+#, python-format
+msgid "Canceled Long Visit Requests"
+msgstr "طلبات طويل المدة ملغاة"
+
+#. module: itq_long_visit_request_concrete
+#: model:ir.ui.menu,name:itq_long_visit_request_concrete.visit_request_canceled_review_menu
+msgid "Canceled Requests"
+msgstr "طلبات ملغاة"
+
+#. module: itq_long_visit_request_concrete
+#: model:ir.model.fields,field_description:itq_long_visit_request_concrete.field_visit_permission_car_color
+msgid "Car Color"
+msgstr "لون السيارة"
+
+#. module: itq_long_visit_request_concrete
+#: model:ir.ui.view,arch_db:itq_long_visit_request_concrete.visit_request_long_line_form_view
+msgid "Car Information"
+msgstr "معلومات السيارة"
+
+#. module: itq_long_visit_request_concrete
+#: model:ir.model.fields,field_description:itq_long_visit_request_concrete.field_visit_permission_car_model
+msgid "Car Model"
+msgstr "طراز السيارة"
+
+#. module: itq_long_visit_request_concrete
+#: model:ir.model.fields,field_description:itq_long_visit_request_concrete.field_visit_permission_car_sign
+msgid "Car Sign"
+msgstr "لوحة السيارة"
+
+#. module: itq_long_visit_request_concrete
+#: model:ir.model.fields,field_description:itq_long_visit_request_concrete.field_visit_permission_car_type
+msgid "Car Type"
+msgstr "نوع السيارة"
+
+#. module: itq_long_visit_request_concrete
+#: model:ir.model.fields,field_description:itq_long_visit_request_concrete.field_visit_permission_country_id
+msgid "Country"
+msgstr "دولة"
+
+#. module: itq_long_visit_request_concrete
+#: model:ir.model.fields,field_description:itq_long_visit_request_concrete.field_rejection_reason_wizard_create_uid
+#: model:ir.model.fields,field_description:itq_long_visit_request_concrete.field_visit_permission_create_uid
+#: model:ir.model.fields,field_description:itq_long_visit_request_concrete.field_visit_request_concrete_long_line_create_uid
+msgid "Created by"
+msgstr "أنشئ بواسطة"
+
+#. module: itq_long_visit_request_concrete
+#: model:ir.model.fields,field_description:itq_long_visit_request_concrete.field_rejection_reason_wizard_create_date
+#: model:ir.model.fields,field_description:itq_long_visit_request_concrete.field_visit_permission_create_date
+#: model:ir.model.fields,field_description:itq_long_visit_request_concrete.field_visit_request_concrete_long_line_create_date
+msgid "Created on"
+msgstr "أنشئ في"
+
+#. module: itq_long_visit_request_concrete
+#: model:ir.model.fields,field_description:itq_long_visit_request_concrete.field_rejection_reason_wizard_display_name
+#: model:ir.model.fields,field_description:itq_long_visit_request_concrete.field_visit_permission_display_name
+#: model:ir.model.fields,field_description:itq_long_visit_request_concrete.field_visit_request_concrete_long_line_display_name
+#: model:ir.model.fields,field_description:itq_long_visit_request_concrete.field_visit_request_long_display_name
+#: model:ir.model.fields,field_description:itq_long_visit_request_concrete.field_visit_request_trainee_display_name
+msgid "Display Name"
+msgstr "الاسم المعروض"
+
+#. module: itq_long_visit_request_concrete
+#: model:ir.ui.view,arch_db:itq_long_visit_request_concrete.visit_permission_form_view
+msgid "Employee & Car Info"
+msgstr "معلومات الزائر &  السيارة"
+
+#. module: itq_long_visit_request_concrete
+#: model:ir.model.fields,field_description:itq_long_visit_request_concrete.field_visit_permission_date_end
+msgid "End Date"
+msgstr "تاريخ الإنتهاء"
+
+#. module: itq_long_visit_request_concrete
+#: model:ir.model.fields,field_description:itq_long_visit_request_concrete.field_rejection_reason_wizard_id
+#: model:ir.model.fields,field_description:itq_long_visit_request_concrete.field_visit_permission_id
+#: model:ir.model.fields,field_description:itq_long_visit_request_concrete.field_visit_request_concrete_long_line_id
+msgid "ID"
+msgstr "المعرف"
+
+#. module: itq_long_visit_request_concrete
+#: model:ir.model.fields,field_description:itq_long_visit_request_concrete.field_rejection_reason_wizard___last_update
+#: model:ir.model.fields,field_description:itq_long_visit_request_concrete.field_visit_permission___last_update
+#: model:ir.model.fields,field_description:itq_long_visit_request_concrete.field_visit_request_concrete_long_line___last_update
+#: model:ir.model.fields,field_description:itq_long_visit_request_concrete.field_visit_request_long___last_update
+#: model:ir.model.fields,field_description:itq_long_visit_request_concrete.field_visit_request_trainee___last_update
+msgid "Last Modified on"
+msgstr "آخر تعديل في"
+
+#. module: itq_long_visit_request_concrete
+#: model:ir.model.fields,field_description:itq_long_visit_request_concrete.field_rejection_reason_wizard_write_uid
+#: model:ir.model.fields,field_description:itq_long_visit_request_concrete.field_visit_permission_write_uid
+#: model:ir.model.fields,field_description:itq_long_visit_request_concrete.field_visit_request_concrete_long_line_write_uid
+msgid "Last Updated by"
+msgstr "آخر تحديث بواسطة"
+
+#. module: itq_long_visit_request_concrete
+#: model:ir.model.fields,field_description:itq_long_visit_request_concrete.field_rejection_reason_wizard_write_date
+#: model:ir.model.fields,field_description:itq_long_visit_request_concrete.field_visit_permission_write_date
+#: model:ir.model.fields,field_description:itq_long_visit_request_concrete.field_visit_request_concrete_long_line_write_date
+msgid "Last Updated on"
+msgstr "آخر تحديث في"
+
+#. module: itq_long_visit_request_concrete
+#: model:ir.actions.report,name:itq_long_visit_request_concrete.long_visit_permission_pdf_report
+#: model:ir.ui.view,arch_db:itq_long_visit_request_concrete.long_visit_permission_report
+msgid "Long Visit Permission"
+msgstr "تصاريح طويلة المدة"
+
+#. module: itq_long_visit_request_concrete
+#: selection:visit.permission,visit_duration:0
+msgid "Morning"
+msgstr "صباحا"
+
+#. module: itq_long_visit_request_concrete
+#: model:ir.model.fields,field_description:itq_long_visit_request_concrete.field_visit_permission_name
+msgid "Name"
+msgstr "الاسم"
+
+#. module: itq_long_visit_request_concrete
+#: model:ir.model.fields,field_description:itq_long_visit_request_concrete.field_visit_permission_need_car_authorization
+msgid "Need Car Authorization"
+msgstr "يتضمن تصريح سيارة؟"
+
+#. module: itq_long_visit_request_concrete
+#: code:addons/itq_long_visit_request_concrete/models/visit_request_long.py:206
+#: code:addons/itq_long_visit_request_concrete/models/visit_request_long.py:207
+#, python-format
+msgid "New"
+msgstr "جديد"
+
+#. module: itq_long_visit_request_concrete
+#: model:ir.actions.act_window,name:itq_long_visit_request_concrete.visit_request_long_window_action
+msgid "New Long Visit Request"
+msgstr "طلبات جديدة للزيارات الطويلة"
+
+#. module: itq_long_visit_request_concrete
+#: code:addons/itq_long_visit_request_concrete/models/visit_request_long.py:22
+#: code:addons/itq_long_visit_request_concrete/models/visit_request_long.py:98
+#, python-format
+msgid "New Long Visit Requests"
+msgstr "طلبات جديدة للزيارات الطويلة"
+
+#. module: itq_long_visit_request_concrete
+#: model:ir.ui.menu,name:itq_long_visit_request_concrete.visit_request_long
+msgid "New Requests"
+msgstr "طلبات جديدة"
+
+#. module: itq_long_visit_request_concrete
+#: selection:visit.permission,visit_duration:0
+msgid "Night"
+msgstr "ليلا"
+
+#. module: itq_long_visit_request_concrete
+#: model:ir.ui.view,arch_db:itq_long_visit_request_concrete.visit_request_long_form_view
+msgid "Permission"
+msgstr "التصاريح"
+
+#. module: itq_long_visit_request_concrete
+#: model:ir.model.fields,field_description:itq_long_visit_request_concrete.field_visit_request_long_permission_count
+msgid "Permission Count"
+msgstr "عدد التصاريح"
+
+#. module: itq_long_visit_request_concrete
+#: model:ir.ui.view,arch_db:itq_long_visit_request_concrete.visit_permission_form_view
+msgid "Permission Info"
+msgstr "معلومات عامة للتصريح"
+
+#. module: itq_long_visit_request_concrete
+#: model:ir.ui.menu,name:itq_long_visit_request_concrete.main_visit_permission_long
+msgid "Permissions"
+msgstr "التصاريح"
+
+#. module: itq_long_visit_request_concrete
+#: model:ir.ui.view,arch_db:itq_long_visit_request_concrete.visit_request_long_form_view
+msgid "Reject"
+msgstr "رفض"
+
+#. module: itq_long_visit_request_concrete
+#: model:ir.model,name:itq_long_visit_request_concrete.model_rejection_reason_wizard
+msgid "Rejection Reason"
+msgstr "سبب الرفض"
+
+#. module: itq_long_visit_request_concrete
+#: model:ir.model.fields,field_description:itq_long_visit_request_concrete.field_visit_permission_date_request
+msgid "Request Date"
+msgstr "تاريخ الطلب"
+
+#. module: itq_long_visit_request_concrete
+#: model:ir.model.fields,field_description:itq_long_visit_request_concrete.field_visit_permission_request_reason
+msgid "Request Reason"
+msgstr "سبب تقديم الطلب"
+
+#. module: itq_long_visit_request_concrete
+#: model:ir.ui.view,arch_db:itq_long_visit_request_concrete.long_visit_permission_report
+msgid "Request Reason:"
+msgstr "سبب الطلب:"
+
+#. module: itq_long_visit_request_concrete
+#: model:ir.ui.menu,name:itq_long_visit_request_concrete.sub_menu_visit_request_long_requester
+msgid "Requester"
+msgstr "الطالب"
+
+#. module: itq_long_visit_request_concrete
+#: model:ir.model.fields,field_description:itq_long_visit_request_concrete.field_visit_permission_hr_department_id
+msgid "Requester Unit"
+msgstr "الوحدة الطالبة"
+
+#. module: itq_long_visit_request_concrete
+#: model:ir.ui.menu,name:itq_long_visit_request_concrete.sub_menu_visit_request_long_reviewer
+msgid "Reviewer"
+msgstr "المراجع"
+
+#. module: itq_long_visit_request_concrete
+#: code:addons/itq_long_visit_request_concrete/models/visit_request_long.py:181
+#, python-format
+msgid "Reviewer Long Visit Requests"
+msgstr "مراجع الطلبات طويلة المدة"
+
+#. module: itq_long_visit_request_concrete
+#: model:ir.actions.act_window,name:itq_long_visit_request_concrete.visit_request_long_reviewer_rejected_window_action
+#: model:ir.ui.menu,name:itq_long_visit_request_concrete.visit_request_rejected_review_menu
+msgid "Reviewer Rejected Requests"
+msgstr "طلبات طويلة المدة رفضها المراجع"
+
+#. module: itq_long_visit_request_concrete
+#: model:ir.ui.view,arch_db:itq_long_visit_request_concrete.visit_permission_form_view
+#: model:ir.ui.view,arch_db:itq_long_visit_request_concrete.visit_permission_tree_view
+msgid "Source"
+msgstr "الطلب"
+
+#. module: itq_long_visit_request_concrete
+#: model:ir.model.fields,field_description:itq_long_visit_request_concrete.field_visit_permission_date_start
+msgid "Start Date"
+msgstr "تاريخ البدء"
+
+#. module: itq_long_visit_request_concrete
+#: model:ir.actions.act_window,help:itq_long_visit_request_concrete.visit_request_long_approved_window_action
+#: model:ir.actions.act_window,help:itq_long_visit_request_concrete.visit_request_long_approver_rejected_window_action
+#: model:ir.actions.act_window,help:itq_long_visit_request_concrete.visit_request_long_canceled_window_action
+#: model:ir.actions.act_window,help:itq_long_visit_request_concrete.visit_request_long_reviewer_rejected_window_action
+#: model:ir.actions.act_window,help:itq_long_visit_request_concrete.visit_request_long_under_approve_window_action
+#: model:ir.actions.act_window,help:itq_long_visit_request_concrete.visit_request_long_under_review_window_action
+#: model:ir.actions.act_window,help:itq_long_visit_request_concrete.visit_request_long_window_action
+msgid "There is no Draft Request to be shown,\n"
+"                Click to create a new long term visit request ."
+msgstr "ليس هناك طلبات جديدة الآن,\n"
+"."
+
+#. module: itq_long_visit_request_concrete
+#: model:ir.actions.act_window,name:itq_long_visit_request_concrete.visit_request_long_under_approve_window_action
+msgid "Under Approve Long Visit Request"
+msgstr "طلب طويل المدة معلقة للإعتماد"
+
+#. module: itq_long_visit_request_concrete
+#: model:ir.ui.menu,name:itq_long_visit_request_concrete.visit_request_long_under_review
+msgid "Under Review"
+msgstr "معلق للمراجعة"
+
+#. module: itq_long_visit_request_concrete
+#: model:ir.actions.act_window,name:itq_long_visit_request_concrete.visit_request_long_under_review_window_action
+msgid "Under Review Long Visit Request"
+msgstr "طلب طويل المدة معلقة للمراجعة"
+
+#. module: itq_long_visit_request_concrete
+#: code:addons/itq_long_visit_request_concrete/models/visit_request_long.py:54
+#, python-format
+msgid "Under Review Long Visit Requests"
+msgstr "طلبات طويلة المدة معلقة للمراجعة"
+
+#. module: itq_long_visit_request_concrete
+#: model:ir.ui.menu,name:itq_long_visit_request_concrete.visit_request_under_approve_review_menu
+msgid "Under approve Requests"
+msgstr "طلبات معلقة للإعتماد"
+
+#. module: itq_long_visit_request_concrete
+#: model:ir.model,name:itq_long_visit_request_concrete.model_visit_additional_items
+msgid "Visit Additional Items"
+msgstr "مقتنيات الزيارة"
+
+#. module: itq_long_visit_request_concrete
+#: model:ir.model.fields,field_description:itq_long_visit_request_concrete.field_visit_permission_visit_duration
+msgid "Visit Duration"
+msgstr "توقيت الزيارة"
+
+#. module: itq_long_visit_request_concrete
+#: model:ir.actions.act_window,name:itq_long_visit_request_concrete.action_visit_permission
+#: model:ir.model,name:itq_long_visit_request_concrete.model_visit_permission
+#: model:ir.model.fields,field_description:itq_long_visit_request_concrete.field_visit_request_long_visit_permission_ids
+#: model:ir.ui.menu,name:itq_long_visit_request_concrete.menu_visit_permission
+msgid "Visit Permission"
+msgstr "تصريح الزيارة"
+
+#. module: itq_long_visit_request_concrete
+#: model:ir.model.fields,field_description:itq_long_visit_request_concrete.field_visit_permission_visit_request_id
+msgid "Visit Request"
+msgstr "طلب تصريح زيارة"
+
+#. module: itq_long_visit_request_concrete
+#: model:ir.ui.view,arch_db:itq_long_visit_request_concrete.visit_request_long_form_view
+msgid "Visit Request Lines"
+msgstr "تفاصيل طلب الزيارة"
+
+#. module: itq_long_visit_request_concrete
+#: model:ir.model.fields,field_description:itq_long_visit_request_concrete.field_visit_request_long_visit_request_long_line_ids
+msgid "Visit Request Long Line"
+msgstr "تفاصيل طلب الزيارة طويل المدة"
+
+#. module: itq_long_visit_request_concrete
+#: model:ir.ui.menu,name:itq_long_visit_request_concrete.main_visit_request_long
+msgid "Visit Requests"
+msgstr "طلبات الزيارة"
+
+#. module: itq_long_visit_request_concrete
+#: model:ir.model.fields,field_description:itq_long_visit_request_concrete.field_visit_permission_visitor_id
+msgid "Visitor ID"
+msgstr "هوية الزائر"
+
+#. module: itq_long_visit_request_concrete
+#: model:ir.ui.view,arch_db:itq_long_visit_request_concrete.visit_request_long_line_form_view
+msgid "Visitor Information"
+msgstr "معلومات الزائر"
+
+#. module: itq_long_visit_request_concrete
+#: model:ir.model.fields,field_description:itq_long_visit_request_concrete.field_visit_permission_visitor_name
+msgid "Visitor Name"
+msgstr "إسم الزائر"
+
+#. module: itq_long_visit_request_concrete
+#: model:ir.model.fields,field_description:itq_long_visit_request_concrete.field_visit_permission_visitor_phone
+msgid "Visitor Phone"
+msgstr "رقم الجوال"
+
+#. module: itq_long_visit_request_concrete
+#: model:ir.model.fields,field_description:itq_long_visit_request_concrete.field_visit_request_concrete_long_line_long_visit_request_id
+msgid "Visitor Request"
+msgstr "طلب الزائر"
+
+#. module: itq_long_visit_request_concrete
+#: code:addons/itq_long_visit_request_concrete/models/visit_request_long.py:17
+#, python-format
+msgid "You cannot confirm a visit request without lines."
+msgstr "لا يمكن إرساله للإعتماد بدون بيانات في تفاصيل الطلب."
+
+#. module: itq_long_visit_request_concrete
+#: code:addons/itq_long_visit_request_concrete/models/visit_request_long.py:209
+#, python-format
+msgid "You cannot create a visit request without lines."
+msgstr "لا يمكن إنشاء طلب زيارة بدون بيانات في تفاصيل الطلب."
+
+#. module: itq_long_visit_request_concrete
+#: model:ir.model,name:itq_long_visit_request_concrete.model_visit_request_concrete_long_line
+msgid "long.visit.request.concrete.line"
+msgstr "long.visit.request.concrete.line"
+
+#. module: itq_long_visit_request_concrete
+#: model:ir.model,name:itq_long_visit_request_concrete.model_visit_request_long
+msgid "long.visit.request"
+msgstr "long.visit.request"
+
+#. module: itq_long_visit_request_concrete
+#: model:ir.model,name:itq_long_visit_request_concrete.model_visit_request_trainee
+msgid "visit.request.trainee"
+msgstr "visit.request.trainee"
+
+#. module: itq_long_visit_request_concrete
+#: model:ir.ui.view,arch_db:itq_long_visit_request_concrete.long_visit_permission_report
+msgid "الإدارة العامة للموارد البشرية"
+msgstr "الإدارة العامة للموارد البشرية"
+
+#. module: itq_long_visit_request_concrete
+#: model:ir.ui.view,arch_db:itq_long_visit_request_concrete.long_visit_permission_report
+msgid "الزائر"
+msgstr "الزائر"
+
+#. module: itq_long_visit_request_concrete
+#: model:ir.ui.view,arch_db:itq_long_visit_request_concrete.long_visit_permission_report
+msgid "اللون"
+msgstr "اللون"
+
+#. module: itq_long_visit_request_concrete
+#: model:ir.ui.view,arch_db:itq_long_visit_request_concrete.long_visit_permission_report
+msgid "الموديل"
+msgstr "الموديل"
+
+#. module: itq_long_visit_request_concrete
+#: model:ir.ui.view,arch_db:itq_long_visit_request_concrete.long_visit_permission_report
+msgid "النظام التكميلي"
+msgstr "النظام التكميلي"
+
+#. module: itq_long_visit_request_concrete
+#: model:ir.ui.view,arch_db:itq_long_visit_request_concrete.long_visit_permission_report
+msgid "جنسية الزائر"
+msgstr "جنسية الزائر"
+
+#. module: itq_long_visit_request_concrete
+#: model:ir.ui.view,arch_db:itq_long_visit_request_concrete.long_visit_permission_report
+msgid "رقم اللوحة"
+msgstr "رقم اللوحة"
+
+#. module: itq_long_visit_request_concrete
+#: model:ir.ui.view,arch_db:itq_long_visit_request_concrete.long_visit_permission_report
+msgid "رقم الهوية"
+msgstr "رقم الهوية"
+
+#. module: itq_long_visit_request_concrete
+#: model:ir.ui.view,arch_db:itq_long_visit_request_concrete.long_visit_permission_report
+msgid "نوع السيارة"
+msgstr "نوع السيارة"
+

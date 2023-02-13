@@ -1,10 +1,9 @@
 # -*- coding: utf-8 -*-
 {
-    'name': "Request For Visit Abstract",
+    'name': "Long Visit Request",
 
     'summary': """
-        Short (1 phrase/line) summary of the module's purpose, used as
-        subtitle on modules listing or apps.openerp.com""",
+        detailed implementation of Request For Visit module abstract model for long and trainee visit requests""",
 
     'description': """
         Long description of module's purpose
@@ -20,15 +19,16 @@
     'version': '0.1',
 
     # any module necessary for this one to work correctly
-    'depends': ['base','mail','hr'],
+    'depends': ['itq_visit_request_abstract','web'],
 
     # always loaded
     'data': [
-        'wizards/rejection_reason_wizard_views.xml',
-        'views/visit_request_abstract_views.xml',
-        'views/res_config_settings.xml',
-        'views/visit_permission_views.xml',
-
+        'data/ir_sequence.xml',
+        'views/visit_request_long_views.xml',
+        'views/action_visit_permission_views.xml',
+        'views/visit_request_long_line.xml',
+        # report
+        'reports/visit_request_long_report.xml'
     ],
     # only loaded in demonstration mode
     'demo': [

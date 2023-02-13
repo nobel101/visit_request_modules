@@ -3,7 +3,7 @@
     <record id="visit_permission_form_view_inherit" model="ir.ui.view">
         <field name="name">visit.permission.form.view.inherit</field>
         <field name="model">visit.permission</field>
-        <field name="inherit_id" ref="itq_visit_request_concrete.visit_permission_form_view"/>
+        <field name="inherit_id" ref="itq_long_visit_request_concrete.visit_permission_form_view"/>
         <field name="arch" type="xml">
             <xpath expr="//sheet/div[hasclass('oe_button_box')]" position="before">
                     <button name="action_in" type="object" class="btn-primary">

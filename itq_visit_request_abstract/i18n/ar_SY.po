@@ -6,8 +6,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Odoo Server 11.0\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2023-02-01 10:35+0000\n"
-"PO-Revision-Date: 2023-02-01 10:35+0000\n"
+"POT-Creation-Date: 2023-02-13 11:04+0000\n"
+"PO-Revision-Date: 2023-02-13 11:04+0000\n"
 "Last-Translator: <>\n"
 "Language-Team: \n"
 "MIME-Version: 1.0\n"
@@ -21,20 +21,19 @@ msgid "<span class=\"fa fa-lg fa-building-o\" title=\"Values set here are compan
 msgstr "<span class=\"fa fa-lg fa-building-o\" title=\"Values set here are company-specific.\" groups=\"base.group_multi_company\"/>"
 
 #. module: itq_visit_request_abstract
-#: model:ir.model.fields,field_description:itq_visit_request_abstract.field_visit_request_concrete_long_line_visit_additional_item_ids
-msgid "Additional Items"
-msgstr "مقتنيات إضافية"
-
-#. module: itq_visit_request_abstract
 #: model:ir.ui.view,arch_db:itq_visit_request_abstract.visit_request_abstract_form_view
 msgid "Approve"
-msgstr "موافقه"
+msgstr "موافقة"
 
 #. module: itq_visit_request_abstract
+#: selection:daily.request.line,state:0
+#: selection:daily.visit.request,state:0
+#: selection:long.visit.request,state:0
+#: selection:long.visit.request.concrete.line,state:0
+#: selection:vehicle.visit.request,state:0
+#: selection:vehicle.visit.request.line,state:0
 #: selection:visit.request.abstract,state:0
 #: selection:visit.request.abstract.line,state:0
-#: selection:visit.request.concrete.long.line,state:0
-#: selection:visit.request.long,state:0
 #: selection:visit.request.trainee,state:0
 msgid "Approved"
 msgstr "موافقة"
@@ -45,39 +44,49 @@ msgid "Approver Reject"
 msgstr "رفض المُعْتمد"
 
 #. module: itq_visit_request_abstract
+#: selection:daily.visit.request,state:0
+#: selection:long.visit.request,state:0
+#: selection:vehicle.visit.request,state:0
 #: selection:visit.request.abstract,state:0
-#: selection:visit.request.long,state:0
 #: selection:visit.request.trainee,state:0
 msgid "Approver Rejected"
 msgstr "رفض المُعْتمد"
 
 #. module: itq_visit_request_abstract
 #: model:ir.actions.act_window,name:itq_visit_request_abstract.action_view_approver_rejection_reason_wizard
+#: model:ir.model.fields,field_description:itq_visit_request_abstract.field_daily_visit_request_approver_rejection_reason
+#: model:ir.model.fields,field_description:itq_visit_request_abstract.field_long_visit_request_approver_rejection_reason
 #: model:ir.model.fields,field_description:itq_visit_request_abstract.field_rejection_reason_wizard_approver_rejection_reason
+#: model:ir.model.fields,field_description:itq_visit_request_abstract.field_vehicle_visit_request_approver_rejection_reason
 #: model:ir.model.fields,field_description:itq_visit_request_abstract.field_visit_request_abstract_approver_rejection_reason
-#: model:ir.model.fields,field_description:itq_visit_request_abstract.field_visit_request_long_approver_rejection_reason
 #: model:ir.model.fields,field_description:itq_visit_request_abstract.field_visit_request_trainee_approver_rejection_reason
 msgid "Approver Rejection Reason"
-msgstr "تعليل رفض الموافق"
+msgstr "تعليل رفض المُعَتمِد"
 
 #. module: itq_visit_request_abstract
+#: model:ir.model.fields,field_description:itq_visit_request_abstract.field_daily_visit_request_attachment_ids
+#: model:ir.model.fields,field_description:itq_visit_request_abstract.field_long_visit_request_attachment_ids
+#: model:ir.model.fields,field_description:itq_visit_request_abstract.field_vehicle_visit_request_attachment_ids
 #: model:ir.model.fields,field_description:itq_visit_request_abstract.field_visit_request_abstract_attachment_ids
-#: model:ir.model.fields,field_description:itq_visit_request_abstract.field_visit_request_long_attachment_ids
 #: model:ir.model.fields,field_description:itq_visit_request_abstract.field_visit_request_trainee_attachment_ids
 #: model:ir.ui.view,arch_db:itq_visit_request_abstract.visit_request_abstract_form_view
 msgid "Attachments"
 msgstr "المُرفقات"
 
 #. module: itq_visit_request_abstract
+#: model:ir.model.fields,field_description:itq_visit_request_abstract.field_daily_visit_request_user_id
+#: model:ir.model.fields,field_description:itq_visit_request_abstract.field_long_visit_request_user_id
+#: model:ir.model.fields,field_description:itq_visit_request_abstract.field_vehicle_visit_request_user_id
 #: model:ir.model.fields,field_description:itq_visit_request_abstract.field_visit_request_abstract_user_id
-#: model:ir.model.fields,field_description:itq_visit_request_abstract.field_visit_request_long_user_id
 #: model:ir.model.fields,field_description:itq_visit_request_abstract.field_visit_request_trainee_user_id
 msgid "Authorized User"
 msgstr "صاحب الصلاحية"
 
 #. module: itq_visit_request_abstract
+#: selection:daily.visit.request,visit_duration:0
+#: selection:long.visit.request,visit_duration:0
+#: selection:vehicle.visit.request,visit_duration:0
 #: selection:visit.request.abstract,visit_duration:0
-#: selection:visit.request.long,visit_duration:0
 #: selection:visit.request.trainee,visit_duration:0
 msgid "Both"
 msgstr "معا"
@@ -90,41 +99,55 @@ msgid "Cancel"
 msgstr "إلغاء"
 
 #. module: itq_visit_request_abstract
+#: selection:daily.request.line,state:0
+#: selection:daily.visit.request,state:0
+#: selection:long.visit.request,state:0
+#: selection:long.visit.request.concrete.line,state:0
+#: selection:vehicle.visit.request,state:0
+#: selection:vehicle.visit.request.line,state:0
 #: selection:visit.request.abstract,state:0
 #: selection:visit.request.abstract.line,state:0
-#: selection:visit.request.concrete.long.line,state:0
-#: selection:visit.request.long,state:0
 #: selection:visit.request.trainee,state:0
 msgid "Cancelled"
 msgstr "ملغى"
 
 #. module: itq_visit_request_abstract
+#: model:ir.model.fields,field_description:itq_visit_request_abstract.field_daily_request_line_car_color
+#: model:ir.model.fields,field_description:itq_visit_request_abstract.field_long_visit_request_concrete_line_car_color
+#: model:ir.model.fields,field_description:itq_visit_request_abstract.field_vehicle_visit_request_line_car_color
 #: model:ir.model.fields,field_description:itq_visit_request_abstract.field_visit_request_abstract_line_car_color
-#: model:ir.model.fields,field_description:itq_visit_request_abstract.field_visit_request_concrete_long_line_car_color_6143
 msgid "Car Color"
 msgstr "لون السيارة"
 
 #. module: itq_visit_request_abstract
+#: model:ir.model.fields,field_description:itq_visit_request_abstract.field_daily_request_line_car_model
+#: model:ir.model.fields,field_description:itq_visit_request_abstract.field_long_visit_request_concrete_line_car_model
+#: model:ir.model.fields,field_description:itq_visit_request_abstract.field_vehicle_visit_request_line_car_model
 #: model:ir.model.fields,field_description:itq_visit_request_abstract.field_visit_request_abstract_line_car_model
-#: model:ir.model.fields,field_description:itq_visit_request_abstract.field_visit_request_concrete_long_line_car_model_6142
 msgid "Car Model"
 msgstr "طراز السيارة"
 
 #. module: itq_visit_request_abstract
+#: model:ir.model.fields,field_description:itq_visit_request_abstract.field_daily_request_line_car_sign
+#: model:ir.model.fields,field_description:itq_visit_request_abstract.field_long_visit_request_concrete_line_car_sign
+#: model:ir.model.fields,field_description:itq_visit_request_abstract.field_vehicle_visit_request_line_car_sign
 #: model:ir.model.fields,field_description:itq_visit_request_abstract.field_visit_request_abstract_line_car_sign
-#: model:ir.model.fields,field_description:itq_visit_request_abstract.field_visit_request_concrete_long_line_car_sign_6144
 msgid "Car Sign"
 msgstr "لوحة السيارة"
 
 #. module: itq_visit_request_abstract
+#: model:ir.model.fields,field_description:itq_visit_request_abstract.field_daily_request_line_car_type
+#: model:ir.model.fields,field_description:itq_visit_request_abstract.field_long_visit_request_concrete_line_car_type
+#: model:ir.model.fields,field_description:itq_visit_request_abstract.field_vehicle_visit_request_line_car_type
 #: model:ir.model.fields,field_description:itq_visit_request_abstract.field_visit_request_abstract_line_car_type
-#: model:ir.model.fields,field_description:itq_visit_request_abstract.field_visit_request_concrete_long_line_car_type_6141
 msgid "Car Type"
 msgstr "نوع السيارة"
 
 #. module: itq_visit_request_abstract
+#: model:ir.model.fields,field_description:itq_visit_request_abstract.field_daily_visit_request_company_id
+#: model:ir.model.fields,field_description:itq_visit_request_abstract.field_long_visit_request_company_id
+#: model:ir.model.fields,field_description:itq_visit_request_abstract.field_vehicle_visit_request_company_id
 #: model:ir.model.fields,field_description:itq_visit_request_abstract.field_visit_request_abstract_company_id
-#: model:ir.model.fields,field_description:itq_visit_request_abstract.field_visit_request_long_company_id
 #: model:ir.model.fields,field_description:itq_visit_request_abstract.field_visit_request_trainee_company_id
 msgid "Company"
 msgstr "الشركة"
@@ -135,6 +158,7 @@ msgid "Countries that are not allowed to be selected in the visit request form."
 msgstr "حامل هذه الجنسية غير مصرح له بتقديم طلب زيارة."
 
 #. module: itq_visit_request_abstract
+#: model:ir.model.fields,field_description:itq_visit_request_abstract.field_rejection_reason_wizard_create_uid
 #: model:ir.model.fields,field_description:itq_visit_request_abstract.field_visit_additional_items_create_uid
 #: model:ir.model.fields,field_description:itq_visit_request_abstract.field_visit_request_abstract_create_uid
 #: model:ir.model.fields,field_description:itq_visit_request_abstract.field_visit_request_abstract_line_create_uid
@@ -142,6 +166,7 @@ msgid "Created by"
 msgstr "أنشئ بواسطة"
 
 #. module: itq_visit_request_abstract
+#: model:ir.model.fields,field_description:itq_visit_request_abstract.field_rejection_reason_wizard_create_date
 #: model:ir.model.fields,field_description:itq_visit_request_abstract.field_visit_additional_items_create_date
 #: model:ir.model.fields,field_description:itq_visit_request_abstract.field_visit_request_abstract_create_date
 #: model:ir.model.fields,field_description:itq_visit_request_abstract.field_visit_request_abstract_line_create_date
@@ -149,6 +174,22 @@ msgid "Created on"
 msgstr "أنشئ في"
 
 #. module: itq_visit_request_abstract
+#: selection:vehicle.visit.request,type:0
+#: selection:visit.permission,type:0
+#: selection:visit.request.abstract,type:0
+#: selection:visit.request.trainee,type:0
+msgid "Daily"
+msgstr "يومي"
+
+#. module: itq_visit_request_abstract
+#: model:ir.model.fields,field_description:itq_visit_request_abstract.field_daily_visit_additional_items_description
+#: model:ir.model.fields,field_description:itq_visit_request_abstract.field_long_visit_additional_items_description
+#: model:ir.model.fields,field_description:itq_visit_request_abstract.field_visit_additional_items_description
+msgid "Description"
+msgstr "الوصف"
+
+#. module: itq_visit_request_abstract
+#: model:ir.model.fields,field_description:itq_visit_request_abstract.field_rejection_reason_wizard_display_name
 #: model:ir.model.fields,field_description:itq_visit_request_abstract.field_visit_additional_items_display_name
 #: model:ir.model.fields,field_description:itq_visit_request_abstract.field_visit_request_abstract_display_name
 #: model:ir.model.fields,field_description:itq_visit_request_abstract.field_visit_request_abstract_line_display_name
@@ -156,29 +197,35 @@ msgid "Display Name"
 msgstr "الاسم المعروض"
 
 #. module: itq_visit_request_abstract
+#: selection:daily.request.line,state:0
+#: selection:daily.visit.request,state:0
+#: selection:long.visit.request,state:0
+#: selection:long.visit.request.concrete.line,state:0
+#: selection:vehicle.visit.request,state:0
+#: selection:vehicle.visit.request.line,state:0
 #: selection:visit.request.abstract,state:0
 #: selection:visit.request.abstract.line,state:0
-#: selection:visit.request.concrete.long.line,state:0
-#: selection:visit.request.long,state:0
 #: selection:visit.request.trainee,state:0
 msgid "Draft"
 msgstr "جديد"
 
 #. module: itq_visit_request_abstract
+#: model:ir.model.fields,field_description:itq_visit_request_abstract.field_daily_visit_request_date_end
+#: model:ir.model.fields,field_description:itq_visit_request_abstract.field_long_visit_request_date_end
+#: model:ir.model.fields,field_description:itq_visit_request_abstract.field_vehicle_visit_request_date_end
 #: model:ir.model.fields,field_description:itq_visit_request_abstract.field_visit_request_abstract_date_end
-#: model:ir.model.fields,field_description:itq_visit_request_abstract.field_visit_request_long_date_end
 #: model:ir.model.fields,field_description:itq_visit_request_abstract.field_visit_request_trainee_date_end
 msgid "End Date"
 msgstr "تاريخ الإنتهاء"
 
 #. module: itq_visit_request_abstract
-#: code:addons/itq_visit_request_abstract/models/visit_request_abstract.py:77
+#: code:addons/itq_visit_request_abstract/models/visit_request_abstract.py:87
 #, python-format
 msgid "End Date cannot be in the past"
 msgstr "لا يمكن أن يكون تاريخ الإنتهاء في الماضي"
 
 #. module: itq_visit_request_abstract
-#: code:addons/itq_visit_request_abstract/models/visit_request_abstract.py:79
+#: code:addons/itq_visit_request_abstract/models/visit_request_abstract.py:89
 #, python-format
 msgid "End Date must be after Start Date"
 msgstr "يجب أن يكون تاريخ الإنتهاء بعد تاريخ البدء"
@@ -195,13 +242,19 @@ msgid "Format"
 msgstr "الهيئة"
 
 #. module: itq_visit_request_abstract
-#: model:ir.model.fields,field_description:itq_visit_request_abstract.field_visit_additional_items_id
+#: model:ir.ui.view,arch_db:itq_visit_request_abstract.visit_request_abstract_form_view
+msgid "Generate Permissions"
+msgstr "إصْدار التصاريح"
+
+#. module: itq_visit_request_abstract
+#: model:ir.model.fields,field_description:itq_visit_request_abstract.field_rejection_reason_wizard_id
 #: model:ir.model.fields,field_description:itq_visit_request_abstract.field_visit_request_abstract_id
 #: model:ir.model.fields,field_description:itq_visit_request_abstract.field_visit_request_abstract_line_id
 msgid "ID"
 msgstr "المعرف"
 
 #. module: itq_visit_request_abstract
+#: model:ir.model.fields,field_description:itq_visit_request_abstract.field_rejection_reason_wizard___last_update
 #: model:ir.model.fields,field_description:itq_visit_request_abstract.field_visit_additional_items___last_update
 #: model:ir.model.fields,field_description:itq_visit_request_abstract.field_visit_request_abstract___last_update
 #: model:ir.model.fields,field_description:itq_visit_request_abstract.field_visit_request_abstract_line___last_update
@@ -209,6 +262,7 @@ msgid "Last Modified on"
 msgstr "آخر تعديل في"
 
 #. module: itq_visit_request_abstract
+#: model:ir.model.fields,field_description:itq_visit_request_abstract.field_rejection_reason_wizard_write_uid
 #: model:ir.model.fields,field_description:itq_visit_request_abstract.field_visit_additional_items_write_uid
 #: model:ir.model.fields,field_description:itq_visit_request_abstract.field_visit_request_abstract_line_write_uid
 #: model:ir.model.fields,field_description:itq_visit_request_abstract.field_visit_request_abstract_write_uid
@@ -216,6 +270,7 @@ msgid "Last Updated by"
 msgstr "آخر تحديث بواسطة"
 
 #. module: itq_visit_request_abstract
+#: model:ir.model.fields,field_description:itq_visit_request_abstract.field_rejection_reason_wizard_write_date
 #: model:ir.model.fields,field_description:itq_visit_request_abstract.field_visit_additional_items_write_date
 #: model:ir.model.fields,field_description:itq_visit_request_abstract.field_visit_request_abstract_line_write_date
 #: model:ir.model.fields,field_description:itq_visit_request_abstract.field_visit_request_abstract_write_date
@@ -223,29 +278,47 @@ msgid "Last Updated on"
 msgstr "آخر تحديث في"
 
 #. module: itq_visit_request_abstract
+#: model:ir.model.fields,field_description:itq_visit_request_abstract.field_daily_request_line_is_legitimate
+#: model:ir.model.fields,field_description:itq_visit_request_abstract.field_long_visit_request_concrete_line_is_legitimate
+#: model:ir.model.fields,field_description:itq_visit_request_abstract.field_vehicle_visit_request_line_is_legitimate
 #: model:ir.model.fields,field_description:itq_visit_request_abstract.field_visit_request_abstract_line_is_legitimate
-#: model:ir.model.fields,field_description:itq_visit_request_abstract.field_visit_request_concrete_long_line_is_legitimate
 msgid "Legitimate for permission"
-msgstr "جاهز للتصريح"
+msgstr "كفء للتصريح"
 
 #. module: itq_visit_request_abstract
+#: selection:vehicle.visit.request,type:0
+#: selection:visit.permission,type:0
+#: selection:visit.request.abstract,type:0
+#: selection:visit.request.trainee,type:0
+msgid "Long"
+msgstr "طويل"
+
+#. module: itq_visit_request_abstract
+#: selection:daily.visit.request,visit_duration:0
+#: selection:long.visit.request,visit_duration:0
+#: selection:vehicle.visit.request,visit_duration:0
 #: selection:visit.request.abstract,visit_duration:0
-#: selection:visit.request.long,visit_duration:0
 #: selection:visit.request.trainee,visit_duration:0
 msgid "Morning"
 msgstr "صباحا"
 
 #. module: itq_visit_request_abstract
+#: model:ir.model.fields,field_description:itq_visit_request_abstract.field_daily_visit_additional_items_name
+#: model:ir.model.fields,field_description:itq_visit_request_abstract.field_daily_visit_request_request_number
+#: model:ir.model.fields,field_description:itq_visit_request_abstract.field_long_visit_additional_items_name
+#: model:ir.model.fields,field_description:itq_visit_request_abstract.field_long_visit_request_request_number
+#: model:ir.model.fields,field_description:itq_visit_request_abstract.field_vehicle_visit_request_request_number
 #: model:ir.model.fields,field_description:itq_visit_request_abstract.field_visit_additional_items_name
 #: model:ir.model.fields,field_description:itq_visit_request_abstract.field_visit_request_abstract_request_number
-#: model:ir.model.fields,field_description:itq_visit_request_abstract.field_visit_request_long_request_number
 #: model:ir.model.fields,field_description:itq_visit_request_abstract.field_visit_request_trainee_request_number
 msgid "Name"
 msgstr "الاسم"
 
 #. module: itq_visit_request_abstract
+#: model:ir.model.fields,field_description:itq_visit_request_abstract.field_daily_request_line_need_car_authorization
+#: model:ir.model.fields,field_description:itq_visit_request_abstract.field_long_visit_request_concrete_line_need_car_authorization
+#: model:ir.model.fields,field_description:itq_visit_request_abstract.field_vehicle_visit_request_line_need_car_authorization
 #: model:ir.model.fields,field_description:itq_visit_request_abstract.field_visit_request_abstract_line_need_car_authorization
-#: model:ir.model.fields,field_description:itq_visit_request_abstract.field_visit_request_concrete_long_line_need_car_authorization_6140
 msgid "Need Car Authorization"
 msgstr "يتضمن تصريح سيارة؟"
 
@@ -256,13 +329,24 @@ msgid "New"
 msgstr "جديد"
 
 #. module: itq_visit_request_abstract
+#: selection:daily.visit.request,visit_duration:0
+#: selection:long.visit.request,visit_duration:0
+#: selection:vehicle.visit.request,visit_duration:0
 #: selection:visit.request.abstract,visit_duration:0
-#: selection:visit.request.long,visit_duration:0
 #: selection:visit.request.trainee,visit_duration:0
 msgid "Night"
 msgstr "ليلا"
 
 #. module: itq_visit_request_abstract
+#: model:ir.model.fields,field_description:itq_visit_request_abstract.field_vehicle_visit_request_permission_count
+#: model:ir.model.fields,field_description:itq_visit_request_abstract.field_visit_request_abstract_permission_count
+#: model:ir.model.fields,field_description:itq_visit_request_abstract.field_visit_request_trainee_permission_count
+msgid "Permission Count"
+msgstr "عدد التصاريح"
+
+#. module: itq_visit_request_abstract
+#: model:ir.model.fields,field_description:itq_visit_request_abstract.field_daily_visit_additional_items_quantity
+#: model:ir.model.fields,field_description:itq_visit_request_abstract.field_long_visit_additional_items_quantity
 #: model:ir.model.fields,field_description:itq_visit_request_abstract.field_visit_additional_items_quantity
 msgid "Quantity"
 msgstr "كمية"
@@ -274,8 +358,10 @@ msgid "Reject"
 msgstr "رفض"
 
 #. module: itq_visit_request_abstract
+#: selection:daily.request.line,state:0
+#: selection:long.visit.request.concrete.line,state:0
+#: selection:vehicle.visit.request.line,state:0
 #: selection:visit.request.abstract.line,state:0
-#: selection:visit.request.concrete.long.line,state:0
 msgid "Rejected"
 msgstr "مفروض"
 
@@ -285,8 +371,10 @@ msgid "Rejection Reason"
 msgstr "سبب الرفض"
 
 #. module: itq_visit_request_abstract
+#: model:ir.model.fields,field_description:itq_visit_request_abstract.field_daily_visit_request_date_request
+#: model:ir.model.fields,field_description:itq_visit_request_abstract.field_long_visit_request_date_request
+#: model:ir.model.fields,field_description:itq_visit_request_abstract.field_vehicle_visit_request_date_request
 #: model:ir.model.fields,field_description:itq_visit_request_abstract.field_visit_request_abstract_date_request
-#: model:ir.model.fields,field_description:itq_visit_request_abstract.field_visit_request_long_date_request
 #: model:ir.model.fields,field_description:itq_visit_request_abstract.field_visit_request_trainee_date_request
 msgid "Request Date"
 msgstr "تاريخ الطلب"
@@ -302,8 +390,10 @@ msgid "Request Information"
 msgstr "معلومات عامة عن الطلب"
 
 #. module: itq_visit_request_abstract
+#: model:ir.model.fields,field_description:itq_visit_request_abstract.field_daily_visit_request_request_reason
+#: model:ir.model.fields,field_description:itq_visit_request_abstract.field_long_visit_request_request_reason
+#: model:ir.model.fields,field_description:itq_visit_request_abstract.field_vehicle_visit_request_request_reason
 #: model:ir.model.fields,field_description:itq_visit_request_abstract.field_visit_request_abstract_request_reason
-#: model:ir.model.fields,field_description:itq_visit_request_abstract.field_visit_request_long_request_reason
 #: model:ir.model.fields,field_description:itq_visit_request_abstract.field_visit_request_trainee_request_reason
 #: model:ir.ui.view,arch_db:itq_visit_request_abstract.visit_request_abstract_form_view
 msgid "Request Reason"
@@ -315,8 +405,15 @@ msgid "Request Start Date"
 msgstr "تاريخ بدأ سريان التصريح"
 
 #. module: itq_visit_request_abstract
+#: model:ir.model.fields,field_description:itq_visit_request_abstract.field_visit_permission_type
+msgid "Request Type"
+msgstr "نوع الطلب"
+
+#. module: itq_visit_request_abstract
+#: model:ir.model.fields,field_description:itq_visit_request_abstract.field_daily_visit_request_hr_department_id
+#: model:ir.model.fields,field_description:itq_visit_request_abstract.field_long_visit_request_hr_department_id
+#: model:ir.model.fields,field_description:itq_visit_request_abstract.field_vehicle_visit_request_hr_department_id
 #: model:ir.model.fields,field_description:itq_visit_request_abstract.field_visit_request_abstract_hr_department_id
-#: model:ir.model.fields,field_description:itq_visit_request_abstract.field_visit_request_long_hr_department_id
 #: model:ir.model.fields,field_description:itq_visit_request_abstract.field_visit_request_trainee_hr_department_id
 msgid "Requester Unit"
 msgstr "الوحدة الطالبة"
@@ -327,8 +424,9 @@ msgid "Return"
 msgstr "إرجاع"
 
 #. module: itq_visit_request_abstract
+#: selection:long.visit.request,state:0
+#: selection:vehicle.visit.request,state:0
 #: selection:visit.request.abstract,state:0
-#: selection:visit.request.long,state:0
 #: selection:visit.request.trainee,state:0
 msgid "Returned"
 msgstr "مُرْجَعْ"
@@ -344,16 +442,19 @@ msgid "Reviewer Reject"
 msgstr "رفض المُرَاجِع"
 
 #. module: itq_visit_request_abstract
+#: selection:long.visit.request,state:0
+#: selection:vehicle.visit.request,state:0
 #: selection:visit.request.abstract,state:0
-#: selection:visit.request.long,state:0
 #: selection:visit.request.trainee,state:0
 msgid "Reviewer Rejected"
 msgstr "مرفوض من قبل المُرَاجِع"
 
 #. module: itq_visit_request_abstract
+#: model:ir.model.fields,field_description:itq_visit_request_abstract.field_daily_visit_request_reviewer_rejection_reason
+#: model:ir.model.fields,field_description:itq_visit_request_abstract.field_long_visit_request_reviewer_rejection_reason
 #: model:ir.model.fields,field_description:itq_visit_request_abstract.field_rejection_reason_wizard_reviewer_rejection_reason
+#: model:ir.model.fields,field_description:itq_visit_request_abstract.field_vehicle_visit_request_reviewer_rejection_reason
 #: model:ir.model.fields,field_description:itq_visit_request_abstract.field_visit_request_abstract_reviewer_rejection_reason
-#: model:ir.model.fields,field_description:itq_visit_request_abstract.field_visit_request_long_reviewer_rejection_reason
 #: model:ir.model.fields,field_description:itq_visit_request_abstract.field_visit_request_trainee_reviewer_rejection_reason
 msgid "Reviewer Rejection Reason"
 msgstr "سبب رفض المُرَاجِع"
@@ -369,15 +470,17 @@ msgid "Send to Review"
 msgstr "إرسال للمراجعة"
 
 #. module: itq_visit_request_abstract
+#: model:ir.model.fields,field_description:itq_visit_request_abstract.field_daily_request_line_sequence
+#: model:ir.model.fields,field_description:itq_visit_request_abstract.field_long_visit_request_concrete_line_sequence
+#: model:ir.model.fields,field_description:itq_visit_request_abstract.field_vehicle_visit_request_line_sequence
 #: model:ir.model.fields,field_description:itq_visit_request_abstract.field_visit_request_abstract_line_sequence
-#: model:ir.model.fields,field_description:itq_visit_request_abstract.field_visit_request_concrete_long_line_sequence_6135
 msgid "Sequence"
 msgstr "التسلسل"
 
 #. module: itq_visit_request_abstract
 #: model:ir.ui.view,arch_db:itq_visit_request_abstract.visit_request_abstract_form_view
 msgid "Set To Draft"
-msgstr "عودة لجديد"
+msgstr "وضع كمسودة"
 
 #. module: itq_visit_request_abstract
 #: model:ir.ui.view,arch_db:itq_visit_request_abstract.res_config_setting_visit_request_long_form_view
@@ -385,59 +488,88 @@ msgid "Set the paper format of printed documents"
 msgstr "إعداد التنسيق الورقي للمستندات المطبوعة"
 
 #. module: itq_visit_request_abstract
+#: model:ir.model.fields,field_description:itq_visit_request_abstract.field_daily_visit_request_date_start
+#: model:ir.model.fields,field_description:itq_visit_request_abstract.field_long_visit_request_date_start
+#: model:ir.model.fields,field_description:itq_visit_request_abstract.field_vehicle_visit_request_date_start
 #: model:ir.model.fields,field_description:itq_visit_request_abstract.field_visit_request_abstract_date_start
-#: model:ir.model.fields,field_description:itq_visit_request_abstract.field_visit_request_long_date_start
 #: model:ir.model.fields,field_description:itq_visit_request_abstract.field_visit_request_trainee_date_start
 msgid "Start Date"
 msgstr "تاريخ البدء"
 
 #. module: itq_visit_request_abstract
-#: code:addons/itq_visit_request_abstract/models/visit_request_abstract.py:75
+#: code:addons/itq_visit_request_abstract/models/visit_request_abstract.py:85
 #, python-format
 msgid "Start Date must be at least today"
 msgstr "تاريخ بدأ سريان التصريح لابد أن يكون بتاريخ اليوم أو بعده."
 
 #. module: itq_visit_request_abstract
-#: code:addons/itq_visit_request_abstract/models/visit_request_abstract.py:73
+#: code:addons/itq_visit_request_abstract/models/visit_request_abstract.py:83
 #, python-format
 msgid "Start Date must be before End Date"
 msgstr "تاريخ بدأ سريان التصريح لابد أن يكون قبل تاريخ انتهاء سريان التصريح."
 
 #. module: itq_visit_request_abstract
+#: model:ir.model.fields,field_description:itq_visit_request_abstract.field_daily_request_line_state
+#: model:ir.model.fields,field_description:itq_visit_request_abstract.field_daily_visit_request_state
+#: model:ir.model.fields,field_description:itq_visit_request_abstract.field_long_visit_request_concrete_line_state
+#: model:ir.model.fields,field_description:itq_visit_request_abstract.field_vehicle_visit_request_line_state
 #: model:ir.model.fields,field_description:itq_visit_request_abstract.field_visit_request_abstract_line_state
-#: model:ir.model.fields,field_description:itq_visit_request_abstract.field_visit_request_concrete_long_line_state_6145
 msgid "State"
-msgstr "الحالة"
+msgstr "المحافظة"
 
 #. module: itq_visit_request_abstract
+#: model:ir.model.fields,field_description:itq_visit_request_abstract.field_long_visit_request_state
+#: model:ir.model.fields,field_description:itq_visit_request_abstract.field_vehicle_visit_request_state
 #: model:ir.model.fields,field_description:itq_visit_request_abstract.field_visit_request_abstract_state
-#: model:ir.model.fields,field_description:itq_visit_request_abstract.field_visit_request_long_state
 #: model:ir.model.fields,field_description:itq_visit_request_abstract.field_visit_request_trainee_state
 msgid "Status"
 msgstr "الحالة "
 
 #. module: itq_visit_request_abstract
+#: selection:vehicle.visit.request,type:0
+#: selection:visit.permission,type:0
+#: selection:visit.request.abstract,type:0
+#: selection:visit.request.trainee,type:0
+msgid "Trainee"
+msgstr "متدرب"
+
+#. module: itq_visit_request_abstract
+#: selection:daily.visit.request,state:0
+#: selection:long.visit.request,state:0
+#: selection:vehicle.visit.request,state:0
 #: selection:visit.request.abstract,state:0
-#: selection:visit.request.long,state:0
 #: selection:visit.request.trainee,state:0
 msgid "Under Approve"
 msgstr "معلق للإعتماد"
 
 #. module: itq_visit_request_abstract
+#: selection:daily.request.line,state:0
+#: selection:long.visit.request,state:0
+#: selection:long.visit.request.concrete.line,state:0
+#: selection:vehicle.visit.request,state:0
+#: selection:vehicle.visit.request.line,state:0
 #: selection:visit.request.abstract,state:0
 #: selection:visit.request.abstract.line,state:0
-#: selection:visit.request.concrete.long.line,state:0
-#: selection:visit.request.long,state:0
 #: selection:visit.request.trainee,state:0
 msgid "Under Review"
 msgstr "معلق للمراجعة"
 
 #. module: itq_visit_request_abstract
+#: selection:vehicle.visit.request,type:0
+#: selection:visit.permission,type:0
+#: selection:visit.request.abstract,type:0
+#: selection:visit.request.trainee,type:0
+msgid "Vehicle"
+msgstr "مركبة"
+
+#. module: itq_visit_request_abstract
+#: model:ir.model.fields,field_description:itq_visit_request_abstract.field_daily_visit_request_visibility_flag
+#: model:ir.model.fields,field_description:itq_visit_request_abstract.field_long_visit_request_visibility_flag
+#: model:ir.model.fields,field_description:itq_visit_request_abstract.field_vehicle_visit_request_visibility_flag
 #: model:ir.model.fields,field_description:itq_visit_request_abstract.field_visit_request_abstract_visibility_flag
-#: model:ir.model.fields,field_description:itq_visit_request_abstract.field_visit_request_long_visibility_flag
 #: model:ir.model.fields,field_description:itq_visit_request_abstract.field_visit_request_trainee_visibility_flag
 msgid "Visibility Flag"
-msgstr "Visibility Flag"
+msgstr "محدد الرؤية"
 
 #. module: itq_visit_request_abstract
 #: model:ir.model,name:itq_visit_request_abstract.model_visit_additional_items
@@ -450,11 +582,18 @@ msgid "Visit Configuration"
 msgstr "إعدادات الزيارات"
 
 #. module: itq_visit_request_abstract
+#: model:ir.model.fields,field_description:itq_visit_request_abstract.field_daily_visit_request_visit_duration
+#: model:ir.model.fields,field_description:itq_visit_request_abstract.field_long_visit_request_visit_duration
+#: model:ir.model.fields,field_description:itq_visit_request_abstract.field_vehicle_visit_request_visit_duration
 #: model:ir.model.fields,field_description:itq_visit_request_abstract.field_visit_request_abstract_visit_duration
-#: model:ir.model.fields,field_description:itq_visit_request_abstract.field_visit_request_long_visit_duration
 #: model:ir.model.fields,field_description:itq_visit_request_abstract.field_visit_request_trainee_visit_duration
 msgid "Visit Duration"
 msgstr "توقيت الزيارة"
+
+#. module: itq_visit_request_abstract
+#: model:ir.model,name:itq_visit_request_abstract.model_visit_permission
+msgid "Visit Permission"
+msgstr "تصريح الزيارة"
 
 #. module: itq_visit_request_abstract
 #: model:ir.model,name:itq_visit_request_abstract.model_visit_request_abstract
@@ -472,31 +611,46 @@ msgid "Visit Request Configuration"
 msgstr "اعدادات طلبات الزيارة"
 
 #. module: itq_visit_request_abstract
-#: model:ir.model.fields,field_description:itq_visit_request_abstract.field_visit_additional_items_visit_request_line_id
-msgid "Visit Request Line"
-msgstr "تفاصيل الزيارة"
+#: model:ir.ui.menu,name:itq_visit_request_abstract.main_visit_request_long
+msgid "Visit Requests"
+msgstr "طلبات الزيارة"
 
 #. module: itq_visit_request_abstract
+#: model:ir.model.fields,field_description:itq_visit_request_abstract.field_vehicle_visit_request_type
+#: model:ir.model.fields,field_description:itq_visit_request_abstract.field_visit_request_abstract_type
+#: model:ir.model.fields,field_description:itq_visit_request_abstract.field_visit_request_trainee_type
+msgid "Visit Type"
+msgstr "نوع الزيارة"
+
+#. module: itq_visit_request_abstract
+#: model:ir.model.fields,field_description:itq_visit_request_abstract.field_daily_request_line_visitor_id_number
+#: model:ir.model.fields,field_description:itq_visit_request_abstract.field_long_visit_request_concrete_line_visitor_id_number
+#: model:ir.model.fields,field_description:itq_visit_request_abstract.field_vehicle_visit_request_line_visitor_id_number
 #: model:ir.model.fields,field_description:itq_visit_request_abstract.field_visit_request_abstract_line_visitor_id_number
-#: model:ir.model.fields,field_description:itq_visit_request_abstract.field_visit_request_concrete_long_line_visitor_id_number_6137
 msgid "Visitor ID Number"
 msgstr "رقم هوية الزائر"
 
 #. module: itq_visit_request_abstract
+#: model:ir.model.fields,field_description:itq_visit_request_abstract.field_daily_request_line_visitor_name
+#: model:ir.model.fields,field_description:itq_visit_request_abstract.field_long_visit_request_concrete_line_visitor_name
+#: model:ir.model.fields,field_description:itq_visit_request_abstract.field_vehicle_visit_request_line_visitor_name
 #: model:ir.model.fields,field_description:itq_visit_request_abstract.field_visit_request_abstract_line_visitor_name
-#: model:ir.model.fields,field_description:itq_visit_request_abstract.field_visit_request_concrete_long_line_visitor_name_6136
 msgid "Visitor Name"
 msgstr "إسم الزائر"
 
 #. module: itq_visit_request_abstract
+#: model:ir.model.fields,field_description:itq_visit_request_abstract.field_daily_request_line_country_id
+#: model:ir.model.fields,field_description:itq_visit_request_abstract.field_long_visit_request_concrete_line_country_id
+#: model:ir.model.fields,field_description:itq_visit_request_abstract.field_vehicle_visit_request_line_country_id
 #: model:ir.model.fields,field_description:itq_visit_request_abstract.field_visit_request_abstract_line_country_id
-#: model:ir.model.fields,field_description:itq_visit_request_abstract.field_visit_request_concrete_long_line_country_id_6138
 msgid "Visitor Nationality"
 msgstr "جنسية الزائر"
 
 #. module: itq_visit_request_abstract
+#: model:ir.model.fields,field_description:itq_visit_request_abstract.field_daily_request_line_visitor_phone
+#: model:ir.model.fields,field_description:itq_visit_request_abstract.field_long_visit_request_concrete_line_visitor_phone
+#: model:ir.model.fields,field_description:itq_visit_request_abstract.field_vehicle_visit_request_line_visitor_phone
 #: model:ir.model.fields,field_description:itq_visit_request_abstract.field_visit_request_abstract_line_visitor_phone
-#: model:ir.model.fields,field_description:itq_visit_request_abstract.field_visit_request_concrete_long_line_visitor_phone_6139
 msgid "Visitor Phone"
 msgstr "رقم الجوال"
 

@@ -1,0 +1,264 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+#	* itq_daily_visit_request
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 11.0\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2023-02-08 16:09+0000\n"
+"PO-Revision-Date: 2023-02-08 16:09+0000\n"
+"Last-Translator: <>\n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: \n"
+"Plural-Forms: \n"
+
+#. module: itq_daily_visit_request
+#: model:ir.model.fields,field_description:itq_daily_visit_request.field_daily_request_line_visit_additional_item_ids
+#: model:ir.ui.view,arch_db:itq_daily_visit_request.daily_visit_request_line_form_view
+msgid "Additional Items"
+msgstr "مقتنيات إضافية"
+
+#. module: itq_daily_visit_request
+#: model:ir.ui.menu,name:itq_daily_visit_request.approved_daily_visit_Request_menuitem
+msgid "Approved"
+msgstr "مُعتَمد"
+
+#. module: itq_daily_visit_request
+#: model:ir.actions.act_window,name:itq_daily_visit_request.action_daily_visit_request_approved
+msgid "Approved Daily Visit Request"
+msgstr "تصريح يومية مُعتَمدة"
+
+#. module: itq_daily_visit_request
+#: code:addons/itq_daily_visit_request/models/daily_visit_request.py:114
+#, python-format
+msgid "Approved Daily Visit Requests"
+msgstr "تصاريح يومية مُعتَمدة"
+
+#. module: itq_daily_visit_request
+#: model:ir.ui.menu,name:itq_daily_visit_request.daily_visit_request_approver_menuitem
+msgid "Approver"
+msgstr "المُعْتَمِد"
+
+#. module: itq_daily_visit_request
+#: code:addons/itq_daily_visit_request/models/daily_visit_request.py:85
+#, python-format
+msgid "Approver Rejected Daily Visit Requests"
+msgstr "تصاريح يومية مرفوضة من المُعْتَمِد"
+
+#. module: itq_daily_visit_request
+#: model:ir.ui.menu,name:itq_daily_visit_request.cancelled_daily_visit_request_menuitem
+msgid "Canceled Requests"
+msgstr "طلبات ملغاة"
+
+#. module: itq_daily_visit_request
+#: model:ir.actions.act_window,name:itq_daily_visit_request.action_daily_visit_request_cancelled
+msgid "Cancelled Daily Visit Request"
+msgstr "طلب تصريح يومي ملغى"
+
+#. module: itq_daily_visit_request
+#: code:addons/itq_daily_visit_request/models/daily_visit_request.py:99
+#, python-format
+msgid "Cancelled Daily Visit Requests"
+msgstr "طلبات تصاريح يومية ملغاة"
+
+#. module: itq_daily_visit_request
+#: model:ir.ui.view,arch_db:itq_daily_visit_request.daily_visit_request_line_form_view
+msgid "Car Information"
+msgstr "معلومات السيارة"
+
+#. module: itq_daily_visit_request
+#: model:ir.model.fields,field_description:itq_daily_visit_request.field_daily_request_line_create_uid
+#: model:ir.model.fields,field_description:itq_daily_visit_request.field_daily_visit_additional_items_create_uid
+#: model:ir.model.fields,field_description:itq_daily_visit_request.field_daily_visit_request_create_uid
+msgid "Created by"
+msgstr "أنشئ بواسطة"
+
+#. module: itq_daily_visit_request
+#: model:ir.model.fields,field_description:itq_daily_visit_request.field_daily_request_line_create_date
+#: model:ir.model.fields,field_description:itq_daily_visit_request.field_daily_visit_additional_items_create_date
+#: model:ir.model.fields,field_description:itq_daily_visit_request.field_daily_visit_request_create_date
+msgid "Created on"
+msgstr "أنشئ في"
+
+#. module: itq_daily_visit_request
+#: selection:daily.visit.request,type:0
+msgid "Daily"
+msgstr "يومي"
+
+#. module: itq_daily_visit_request
+#: model:ir.actions.act_window,name:itq_daily_visit_request.action_visit_daily_permission
+#: model:ir.ui.menu,name:itq_daily_visit_request.daily_visit_permission_menuitem
+msgid "Daily Permissions"
+msgstr "تصاريح يومية"
+
+#. module: itq_daily_visit_request
+#: model:ir.model.fields,field_description:itq_daily_visit_request.field_daily_visit_request_daily_request_line_ids
+msgid "Daily Request Line"
+msgstr "تفاصيل طلب تصريح يومي"
+
+#. module: itq_daily_visit_request
+#: model:ir.model,name:itq_daily_visit_request.model_daily_request_line
+msgid "Daily Request Line Model"
+msgstr "صورة من تفاصيل طلب تصريح يومي"
+
+#. module: itq_daily_visit_request
+#: model:ir.actions.act_window,name:itq_daily_visit_request.daily_visit_request_action
+#: model:ir.model,name:itq_daily_visit_request.model_daily_visit_request
+#: model:ir.model.fields,field_description:itq_daily_visit_request.field_daily_request_line_daily_visit_id
+#: model:ir.model.fields,field_description:itq_daily_visit_request.field_visit_permission_daily_visit_id
+msgid "Daily Visit Request"
+msgstr "طلب تصريح زيارة يومي"
+
+#. module: itq_daily_visit_request
+#: model:ir.ui.menu,name:itq_daily_visit_request.arrow_daily_visit_menuitem
+msgid "Daily Visits"
+msgstr "زيارات يومية"
+
+#. module: itq_daily_visit_request
+#: model:ir.model.fields,field_description:itq_daily_visit_request.field_daily_request_line_display_name
+#: model:ir.model.fields,field_description:itq_daily_visit_request.field_daily_visit_additional_items_display_name
+#: model:ir.model.fields,field_description:itq_daily_visit_request.field_daily_visit_request_display_name
+msgid "Display Name"
+msgstr "الاسم المعروض"
+
+#. module: itq_daily_visit_request
+#: model:ir.model.fields,field_description:itq_daily_visit_request.field_daily_request_line_id
+#: model:ir.model.fields,field_description:itq_daily_visit_request.field_daily_visit_additional_items_id
+#: model:ir.model.fields,field_description:itq_daily_visit_request.field_daily_visit_request_id
+msgid "ID"
+msgstr "المعرف"
+
+#. module: itq_daily_visit_request
+#: model:ir.model.fields,field_description:itq_daily_visit_request.field_daily_request_line___last_update
+#: model:ir.model.fields,field_description:itq_daily_visit_request.field_daily_visit_additional_items___last_update
+#: model:ir.model.fields,field_description:itq_daily_visit_request.field_daily_visit_request___last_update
+msgid "Last Modified on"
+msgstr "آخر تعديل في"
+
+#. module: itq_daily_visit_request
+#: model:ir.model.fields,field_description:itq_daily_visit_request.field_daily_request_line_write_uid
+#: model:ir.model.fields,field_description:itq_daily_visit_request.field_daily_visit_additional_items_write_uid
+#: model:ir.model.fields,field_description:itq_daily_visit_request.field_daily_visit_request_write_uid
+msgid "Last Updated by"
+msgstr "آخر تحديث بواسطة"
+
+#. module: itq_daily_visit_request
+#: model:ir.model.fields,field_description:itq_daily_visit_request.field_daily_request_line_write_date
+#: model:ir.model.fields,field_description:itq_daily_visit_request.field_daily_visit_additional_items_write_date
+#: model:ir.model.fields,field_description:itq_daily_visit_request.field_daily_visit_request_write_date
+msgid "Last Updated on"
+msgstr "آخر تحديث في"
+
+#. module: itq_daily_visit_request
+#: selection:daily.visit.request,type:0
+msgid "Long"
+msgstr "طويل"
+
+#. module: itq_daily_visit_request
+#: code:addons/itq_daily_visit_request/models/daily_visit_request.py:54
+#: code:addons/itq_daily_visit_request/models/daily_visit_request.py:55
+#, python-format
+msgid "New"
+msgstr "جديد"
+
+#. module: itq_daily_visit_request
+#: model:ir.ui.menu,name:itq_daily_visit_request.new_daily_visit_request_menuitem
+msgid "New Request"
+msgstr "طلب جديد"
+
+#. module: itq_daily_visit_request
+#: model:ir.model.fields,field_description:itq_daily_visit_request.field_daily_visit_request_permission_ids
+#: model:ir.ui.view,arch_db:itq_daily_visit_request.daily_visit_request_form_view
+msgid "Permission"
+msgstr "التصاريح"
+
+#. module: itq_daily_visit_request
+#: model:ir.model.fields,field_description:itq_daily_visit_request.field_daily_visit_request_permission_count
+msgid "Permission Count"
+msgstr "عدد التصاريح"
+
+#. module: itq_daily_visit_request
+#: model:ir.ui.menu,name:itq_daily_visit_request.permission_main_menuitem
+msgid "Permissions"
+msgstr "التصاريح"
+
+#. module: itq_daily_visit_request
+#: model:ir.ui.view,arch_db:itq_daily_visit_request.daily_visit_request_form_view
+msgid "Reject"
+msgstr "رفض"
+
+#. module: itq_daily_visit_request
+#: model:ir.actions.act_window,name:itq_daily_visit_request.action_daily_visit_request_rejected
+msgid "Rejected Daily Visit Request"
+msgstr "طلب زيارة يومي مرفوض"
+
+#. module: itq_daily_visit_request
+#: model:ir.ui.menu,name:itq_daily_visit_request.rejected_daily_visit_request_menuitem
+msgid "Rejected Requests"
+msgstr "طلبات مرفوضة"
+
+#. module: itq_daily_visit_request
+#: model:ir.ui.menu,name:itq_daily_visit_request.daily_visit_request_requester_menuitem
+msgid "Requester"
+msgstr "الطالب"
+
+#. module: itq_daily_visit_request
+#: selection:daily.visit.request,type:0
+msgid "Trainee"
+msgstr "متدرب"
+
+#. module: itq_daily_visit_request
+#: model:ir.ui.menu,name:itq_daily_visit_request.under_approve_daily_visit_request_menuitem
+msgid "Under Approve"
+msgstr "قيد الإعتماد"
+
+#. module: itq_daily_visit_request
+#: model:ir.actions.act_window,name:itq_daily_visit_request.action_daily_visit_request_under_approve
+msgid "Under Approve Daily Visit Request"
+msgstr "طلبات زيارة يومية قيد الإعتماد"
+
+#. module: itq_daily_visit_request
+#: code:addons/itq_daily_visit_request/models/daily_visit_request.py:70
+#, python-format
+msgid "Under Review Daily Visit Requests"
+msgstr "طلبات زيارة يومية قيد المراجعة "
+
+#. module: itq_daily_visit_request
+#: model:ir.model,name:itq_daily_visit_request.model_daily_visit_additional_items
+msgid "Visit Additional Items"
+msgstr "مقتنيات الزيارة"
+
+#. module: itq_daily_visit_request
+#: model:ir.model,name:itq_daily_visit_request.model_visit_permission
+msgid "Visit Permission"
+msgstr "تصريح الزيارة"
+
+#. module: itq_daily_visit_request
+#: model:ir.model.fields,field_description:itq_daily_visit_request.field_daily_visit_additional_items_daily_visit_request_line_id
+msgid "Visit Request Line"
+msgstr "تفاصيل الزيارة"
+
+#. module: itq_daily_visit_request
+#: model:ir.ui.view,arch_db:itq_daily_visit_request.daily_visit_request_form_view
+msgid "Visit Request Lines"
+msgstr "تفاصيل طلب الزيارة"
+
+#. module: itq_daily_visit_request
+#: model:ir.model.fields,field_description:itq_daily_visit_request.field_daily_visit_request_type
+msgid "Visit Type"
+msgstr "نوع الزيارة"
+
+#. module: itq_daily_visit_request
+#: model:ir.ui.view,arch_db:itq_daily_visit_request.daily_visit_request_line_form_view
+msgid "Visitor Information"
+msgstr "معلومات الزائر"
+
+#. module: itq_daily_visit_request
+#: code:addons/itq_daily_visit_request/models/daily_visit_request.py:57
+#, python-format
+msgid "You cannot create a visit request without lines."
+msgstr "لا يمكنك طلب زيارة بدون تفاصيلها."
+

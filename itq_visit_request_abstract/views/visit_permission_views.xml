@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<odoo>
+    <record id="daily_visit_permission_tree" model="ir.ui.view">
+        <field name="name">Daily Visit Permission Tree</field>
+        <field name="model">visit.permission</field>
+        <field name="mode">primary</field>
+        <field name="arch" type="xml">
+            <tree>
+                <field name="name"/>
+                <field name="date_start"/>
+                <field name="date_end"/>
+                <field name="visit_duration"/>
+                <field name="hr_department_id"/>
+                <field name="user_id"/>
+                <field name="date_request"/>
+                <field name="request_reason"/>
+                <field name="need_car_authorization"/>
+                <field name="visitor_name"/>
+                <field name="visitor_id"/>
+                <field name="visitor_phone"/>
+                <field name="need_car_authorization"/>
+                <field name="car_color"/>
+                <field name="car_model"/>
+                <field name="car_sign"/>
+                <field name="car_type"/>
+            </tree>
+        </field>
+    </record>
+</odoo>

@@ -50,6 +50,6 @@
         <field name="context">{'create':False,'edit':False}</field>
     </record>
     <menuitem id="main_menu_visit_login" name="Visit Login"
-              parent="itq_visit_request_concrete.main_visit_request_long"/>
+              parent="itq_long_visit_request_concrete.arrow_long_visit_menuitem"/>
     <menuitem id="sub_menu_visit_login" name="Login" parent="main_menu_visit_login" action="window_action_visit_login"/>
 </odoo>
