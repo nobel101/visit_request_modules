@@ -24,7 +24,7 @@
                         <field name="vehicle_move_type" attrs="{'readonly':[('state','!=','draft')]}"/>
                         <field name="out_reason" attrs="{'invisible': [('vehicle_move_type', '!=', 'out')],'required':[('vehicle_move_type',
                         '=','out')],'readonly':[('state','!=','draft')]}"/>
-                        d<field name="vehicle_content" attrs="{'invisible': [('vehicle_move_type', '!=', 'in')],
+                        <field name="vehicle_content" attrs="{'invisible': [('vehicle_move_type', '!=', 'in')],
                         'readonly':[('state','!=','draft')]}"/>
                     </group>
                     <group></group>

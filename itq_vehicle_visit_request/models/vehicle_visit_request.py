@@ -21,6 +21,8 @@ class VehicleVisitRequest(models.Model):
     def create(self, vals):
         if vals.get('request_number', _('New')) == _('New'):
             vals['request_number'] = self.env['ir.sequence'].next_by_code('vehicle.visit.request.sequence') or _('New')
+        if not vals.get('visit_request_long_line_ids'):
+            raise ValidationError(_('You cannot create a visit request without lines.'))
         result = super(VehicleVisitRequest, self).create(vals)
         return result
 
@@ -35,7 +37,7 @@ class VehicleVisitRequest(models.Model):
                 record.state = 'approved'
                 self.env['visit.permission'].sudo().create({
                     'name': 'Permission Number ' + record.request_number or '' + ' For ' + line.visitor_name or '',
-                    'daily_visit_id': record.id,
+                    'vehicle_visit_id': record.id,
                     'date_start': record.date_start,
                     'date_end': record.date_end,
                     'visit_duration': record.visit_duration,
